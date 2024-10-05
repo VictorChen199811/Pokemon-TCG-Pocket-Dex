@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const history = require('connect-history-api-fallback');
+const fs = require('fs');
 const app = express();
 
 // 获取环境变量中的端口，如果没有则使用 3000
@@ -10,6 +11,12 @@ const PORT = process.env.PORT || 3000;
 // 这对于处理 Vue Router 的 history 模式很重要
 app.use(history());
 
+// 检查 dist 目录是否存在
+if (!fs.existsSync(path.join(__dirname, 'dist'))) {
+  console.error('Error: dist directory not found. Please build your Vue app first.');
+  process.exit(1);
+}
+
 // 将 dist 目录设置为静态文件目录
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -18,7 +25,15 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
+// 添加错误处理中间件
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 // 启动服务器
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+}).on('error', (err) => {
+  console.error('Failed to start server:', err);
 });
