@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "start": "node server.cjs"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.21.0",

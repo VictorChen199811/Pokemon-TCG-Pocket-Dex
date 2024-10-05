@@ -1,7 +1,12 @@
-const express = require('express');
-const path = require('path');
-const history = require('connect-history-api-fallback');
-const fs = require('fs');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import history from 'connect-history-api-fallback';
+import fs from 'fs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 
 // 获取环境变量中的端口，如果没有则使用 3000
