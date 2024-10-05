@@ -22,8 +22,19 @@ if (!fs.existsSync(path.join(__dirname, 'dist'))) {
   process.exit(1);
 }
 
+// 在设置静态文件目录之前添加这个中间件
+app.use((req, res, next) => {
+  res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
+  res.header('Pragma', 'no-cache');
+  res.header('Expires', '0');
+  next();
+});
+
 // 将 dist 目录设置为静态文件目录
 app.use(express.static(path.join(__dirname, 'dist')));
+
+// 添加额外的静态文件目录（如果需要）
+app.use('/assets', express.static(path.join(__dirname, 'dist', 'assets')));
 
 // 所有的请求都返回 index.html
 app.get('*', (req, res) => {
@@ -41,4 +52,10 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 }).on('error', (err) => {
   console.error('Failed to start server:', err);
+});
+
+// 添加 CORS 头
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
 });

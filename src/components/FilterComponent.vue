@@ -2,7 +2,7 @@
   <div class="filter-component">
     <div class="filter-row">
       <label>搜索</label>
-      <input type="text" v-model="searchTerm" placeholder="請輸入搜索詞" @input="emitFilter">
+      <input type="text" v-model="searchTerm" placeholder="請輸入寶可夢名稱" @input="emitFilter">
     </div>
     <div class="filter-row">
       <label>屬性</label>
