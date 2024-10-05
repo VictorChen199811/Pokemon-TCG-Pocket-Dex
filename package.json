@@ -15,6 +15,7 @@
   "dependencies": {
     "connect-history-api-fallback": "^2.0.0",
     "express": "^4.21.0",
+    "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
