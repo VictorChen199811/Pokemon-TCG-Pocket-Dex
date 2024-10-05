@@ -29,6 +29,6 @@
     "vue-tsc": "^2.0.21"
   },
   "engines": {
-    "node": "20.x"  // 或者您使用的 Node.js 版本
+    "node": "20.x" 
   }
 }
