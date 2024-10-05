@@ -12,6 +12,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "connect-history-api-fallback": "^2.0.0",
     "express": "^4.21.0",
     "html2canvas": "^1.4.1",
     "pinia": "^2.1.7",
@@ -29,6 +30,6 @@
     "vue-tsc": "^2.0.21"
   },
   "engines": {
-    "node": "20.x" 
+    "node": "20.x"
   }
 }
