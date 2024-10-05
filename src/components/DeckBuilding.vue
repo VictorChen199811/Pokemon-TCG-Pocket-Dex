@@ -1,26 +1,59 @@
 <template>
     <div class="deck-building">
-        <h2>牌組構築</h2>
-
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>牌組構築</h2>
+            <div class="deck-actions">
+                <button @click="clearDeck" class="clear-deck-button">清空牌組</button>
+                <div class="export-buttons">
+                    <!-- PC 版本的按钮 -->
+                    <button @click="showNameInput" class="export-button pc-button">分享牌組</button>
+                    <!-- 手机版本的按钮 -->
+                    <button @click="shareDeck" class="export-button mobile-button">分享牌組</button>
+                </div>
+            </div>
+        </div>
         <!-- 10*2 的牌組區域 -->
         <div class="deck-container" ref="deckContainer">
             <div v-if="deckName" class="deck-name">{{ deckName }}</div>
-            <div class="deck-area">
+            <div :class="['deck-area', { 'mobile-layout': isMobile }]">
                 <div v-for="(card, index) in deck" :key="index" class="card-slot" @click="removeFromDeck(index)">
                     <img :src="card.imageUrl" :alt="card.name" class="card-image">
                 </div>
-                <div v-for="i in 20 - deck.length" :key="i + deck.length" class="card-slot empty"></div>
+                <div v-for="i in (isMobile ? 20 : 20) - deck.length" :key="i + deck.length" class="card-slot empty"></div>
             </div>
         </div>
 
-        <!-- 輸出為 JPG 的按鈕 -->
-        <button @click="showNameInput" class="export-button">輸出為 JPG</button>
-
+        <!-- 轻量级过滤组件 -->
+        <div class="light-filter-component">
+            <div class="filter-toggle" @click="toggleFilter">
+                <img src="/img/material-symbols-light--keyboard-arrow-down-rounded.png"
+                    :class="{ 'rotate': isFilterVisible }" alt="Toggle filter" class="toggle-icon">
+            </div>
+            <div v-if="isFilterVisible" class="filter-content">
+                <div class="filter-grid">
+                    <label>搜索</label>
+                    <input type="text" v-model="searchTerm" placeholder="請輸入寶可夢名稱" @input="filterCards">
+                    <label>屬性</label>
+                    <div class="type-icons">
+                        <img v-for="type in types" :key="type" :src="type" @click="toggleType(type)"
+                            :class="{ active: selectedTypes.includes(type) }">
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- 所有卡牌圖片區域 -->
         <div class="card-gallery">
-            <div v-for="card in cards" :key="card.id" class="gallery-card" @click="addToDeck(card)"
-                :class="{ disabled: !canAddCard(card) }">
+            <div v-for="card in filteredCards" :key="card.id" 
+                 class="gallery-card" 
+                 @click="addToDeck(card)"
+                 :class="{ 
+                   disabled: !canAddCard(card),
+                   selected: isCardSelected(card)
+                 }">
                 <img :src="card.imageUrl" :alt="card.name" class="card-image">
+                <div v-if="isCardSelected(card)" class="card-count">
+                    {{ getCardCount(card) }}
+                </div>
             </div>
         </div>
 
@@ -35,11 +68,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- 添加回到顶部的按钮 -->
+        <button @click="scrollToTop" class="scroll-to-top" v-show="showScrollTop">UP</button>
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { cards } from '@/data/cards'
 import type { Card } from '@/data/cards'
 import html2canvas from 'html2canvas'
@@ -51,6 +87,32 @@ export default defineComponent({
         const deckContainer = ref<HTMLElement | null>(null)
         const deckName = ref('')
         const showNameInputBox = ref(false)
+        const searchTerm = ref('')
+        const selectedTypes = ref<string[]>([])
+        const isFilterVisible = ref(true)  // 新增：控制过滤器显示状态
+        const isMobile = ref(false)
+        const showScrollTop = ref(false)
+
+        const types = [
+            '/img/type/grass.png',
+            '/img/type/fire.png',
+            '/img/type/water.png',
+            '/img/type/electric.png',
+            '/img/type/psychic.png',
+            '/img/type/fighting.png',
+            '/img/type/darkness.png',
+            '/img/type/metal.png',
+            '/img/type/dragon.png',
+            '/img/type/colorless.png',
+        ]
+
+        const filteredCards = computed(() => {
+            return cards.filter(card => {
+                const nameMatch = card.name.toLowerCase().includes(searchTerm.value.toLowerCase())
+                const typeMatch = selectedTypes.value.length === 0 || selectedTypes.value.includes(card.type)
+                return nameMatch && typeMatch
+            })
+        })
 
         const cardCounts = computed(() => {
             const counts: { [key: string]: number } = {}
@@ -129,18 +191,132 @@ export default defineComponent({
             }
         }
 
+        const toggleType = (type: string) => {
+            const index = selectedTypes.value.indexOf(type)
+            if (index === -1) {
+                selectedTypes.value.push(type)
+            } else {
+                selectedTypes.value.splice(index, 1)
+            }
+        }
+
+        const filterCards = () => {
+            // 这个函数可以为空，因为我们使用了计算性 filteredCards
+        }
+
+        const toggleFilter = () => {
+            isFilterVisible.value = !isFilterVisible.value
+        }
+
+        const shareDeck = async () => {
+            if (deckContainer.value) {
+                try {
+                    // 在生成图片之前临时修改布局
+                    const originalClass = deckContainer.value.querySelector('.deck-area')?.className;
+                    if (isMobile.value) {
+                        deckContainer.value.querySelector('.deck-area')?.classList.add('mobile-layout');
+                    }
+
+                    const canvas = await html2canvas(deckContainer.value, {
+                        backgroundColor: null,
+                        scale: 2
+                    });
+
+                    // 恢复原始布局
+                    if (originalClass) {
+                        deckContainer.value.querySelector('.deck-area')!.className = originalClass;
+                    }
+
+                    const blob = await new Promise<Blob>((resolve) => {
+                        canvas.toBlob((blob) => resolve(blob!), 'image/jpeg', 0.9);
+                    });
+                    const file = new File([blob], 'deck.jpg', { type: 'image/jpeg' });
+                    
+                    if (navigator.share) {
+                        await navigator.share({
+                            files: [file],
+                            title: deckName.value || '我的牌組',
+                            text: '查看我的寶可夢卡牌牌組！'
+                        });
+                    } else {
+                        // 如果设备不支持分享API，则回退到下载方法
+                        const link = document.createElement('a');
+                        link.href = URL.createObjectURL(blob);
+                        link.download = `${deckName.value || 'deck'}.jpg`;
+                        link.click();
+                    }
+                } catch (error) {
+                    console.error('分享失败:', error);
+                    alert('分享失败，请稍后再试。');
+                }
+            }
+        };
+
+        const isCardSelected = (card: Card) => {
+            return deck.value.some(c => c.id === card.id);
+        };
+
+        const getCardCount = (card: Card) => {
+            return deck.value.filter(c => c.id === card.id).length;
+        };
+
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+        const toggleScrollTopButton = () => {
+            showScrollTop.value = window.pageYOffset > 300
+        }
+
+        const clearDeck = () => {
+            if (confirm('確定要清空牌組嗎？')) {
+                deck.value = [];
+            }
+        }
+
+        onMounted(() => {
+            const checkMobile = () => {
+                isMobile.value = window.innerWidth <= 768
+            }
+            checkMobile()
+            window.addEventListener('resize', checkMobile)
+            window.addEventListener('scroll', toggleScrollTopButton)
+        })
+
+        onUnmounted(() => {
+            window.removeEventListener('scroll', toggleScrollTopButton)
+        })
+
         return {
             cards,
             deck,
             deckContainer,
             deckName,
             showNameInputBox,
+            searchTerm,
+            selectedTypes,
+            types,
+            filteredCards,
             addToDeck,
             removeFromDeck,
             canAddCard,
             showNameInput,
             cancelNameInput,
-            exportAsJPG
+            exportAsJPG,
+            toggleType,
+            filterCards,
+            isFilterVisible,
+            toggleFilter,
+            shareDeck,
+            isMobile,
+            isCardSelected,
+            getCardCount,
+            showScrollTop,
+            scrollToTop,
+            clearDeck,
         }
     }
 })
@@ -178,6 +354,11 @@ export default defineComponent({
     padding: 10px;
 }
 
+.deck-area.mobile-layout {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
 .card-slot {
     aspect-ratio: 2.5 / 3.5;
     background-color: #f0f0f0;
@@ -196,11 +377,24 @@ export default defineComponent({
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* 添加这行 */
+    max-width: 1200px; /* 添加这行，可以根据需要调整 */
+    margin: 0 auto; /* 添加这行 */
 }
 
 .gallery-card {
+    position: relative;
     width: 100px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-card:hover {
+    transform: scale(1.05);
+}
+
+.gallery-card.selected {
+    box-shadow: 0 0 10px 3px #4CAF50;
 }
 
 .gallery-card.disabled {
@@ -214,19 +408,41 @@ export default defineComponent({
     object-fit: contain;
 }
 
+.export-buttons {
+    display: flex;
+    gap: 10px;
+}
+
 .export-button {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: orange; /* 将按钮颜色统一设置为橘色 */
 }
 
 .export-button:hover {
-    background-color: #45a049;
+    opacity: 0.9;
+}
+
+.pc-button {
+    display: inline-block;
+}
+
+.mobile-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pc-button {
+        display: none;
+    }
+    .mobile-button {
+        display: inline-block;
+    }
 }
 
 .modal {
@@ -269,5 +485,143 @@ export default defineComponent({
 .modal-buttons button {
     margin-left: 10px;
     padding: 5px 10px;
+}
+
+/* 添加轻量级过滤组件的样式 */
+.light-filter-component {
+    background-color: #1e2124;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-toggle {
+    cursor: pointer;
+    background-color: #1e2124; /* 保持与 light-filter-component 相同的背景色 */
+    border-radius: 20px;
+    width: 100%;
+    height: 10px; /* 增加高度以容纳图标 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    /* 移除背景色和边框半径 */
+}
+
+.toggle-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.filter-content {
+    margin-top: 10px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-grid label {
+    font-weight: bold;
+    text-align: center;
+}
+
+.filter-grid input {
+    padding: 8px;
+    background-color: #2c2f33;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%; 
+    justify-self: start; 
+}
+
+.type-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+.type-icons img {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.type-icons img.active {
+    opacity: 1;
+}
+
+.card-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+}
+
+.deck-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.clear-deck-button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-deck-button:hover {
+    background-color: #c82333;
 }
 </style>
