@@ -17,9 +17,12 @@
             <div v-if="deckName" class="deck-name">{{ deckName }}</div>
             <div :class="['deck-area', { 'mobile-layout': isMobile }]">
                 <div v-for="(card, index) in deck" :key="index" class="card-slot" @click="removeFromDeck(index)">
-                    <img :src="card.imageUrl" :alt="card.name" class="card-image">
+                    <picture>
+                        <source :srcset="card.imageUrl" type="image/webp">
+                        <img :src="card.imageUrl.replace('.webp', '.jpg')" :alt="card.name" class="card-image">
+                    </picture>
                 </div>
-                <div v-for="i in (isMobile ? 20 : 20) - deck.length" :key="i + deck.length" class="card-slot empty"></div>
+                <div v-for="i in 20 - deck.length" :key="i + deck.length" class="card-slot empty"></div>
             </div>
         </div>
 
@@ -50,7 +53,10 @@
                    disabled: !canAddCard(card),
                    selected: isCardSelected(card)
                  }">
-                <img :src="card.imageUrl" :alt="card.name" class="card-image">
+                <picture>
+                    <source :srcset="card.imageUrl" type="image/webp">
+                    <img :src="card.imageUrl.replace('.webp', '.jpg')" :alt="card.name" class="card-image">
+                </picture>
                 <div v-if="isCardSelected(card)" class="card-count">
                     {{ getCardCount(card) }}
                 </div>
@@ -78,7 +84,6 @@
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { cards } from '@/data/cards'
 import type { Card } from '@/data/cards'
-import { toJpeg } from 'html-to-image'
 
 export default defineComponent({
     name: 'DeckBuilding',
@@ -149,84 +154,157 @@ export default defineComponent({
             showNameInputBox.value = false
         }
 
-        const exportAsJPG = async () => {
-            if (deckContainer.value) {
-                showNameInputBox.value = false
-                try {
-                    // 等待所有图片加载完成
-                    await Promise.all(Array.from(deckContainer.value.querySelectorAll('img')).map(img => {
-                        if (img.complete) return Promise.resolve();
-                        return new Promise(resolve => {
-                            img.onload = img.onerror = resolve;
-                        });
-                    }));
+        const exportDeckAsImage = async () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            if (!ctx) {
+                console.error('無法創建 canvas context');
+                return null;
+            }
 
-                    const dataUrl = await toJpeg(deckContainer.value, {
-                        quality: 0.95,
-                        backgroundColor: 'white',
-                        width: deckContainer.value.offsetWidth,
-                        height: deckContainer.value.offsetHeight,
-                        style: {
-                            transform: 'scale(1)',
-                            transformOrigin: 'top left'
-                        }
-                    });
+            const scale = 2; // 增加畫布的縮放比例
+            const cardWidth = 100 * scale;
+            const cardHeight = 140 * scale;
+            const padding = 10 * scale;
+            const columns = 10;
+            const rows = 2;
 
-                    // 创建一个新的 Image 对象来加载生成的图片
+            const borderWidth = 2 * scale;
+            const outerPadding = 20 * scale;
+
+            canvas.width = columns * cardWidth + (columns + 1) * padding + 2 * outerPadding + 2 * borderWidth;
+            canvas.height = rows * cardHeight + (rows + 1) * padding + 2 * outerPadding + 2 * borderWidth;
+
+            // 設置 canvas 的縮放
+            ctx.scale(scale, scale);
+
+            // 繪製外框
+            ctx.fillStyle = '#ccc';
+            ctx.fillRect(0, 0, canvas.width / scale, canvas.height / scale);
+
+            // 繪製背景圖片
+            const bgImage = new Image();
+            bgImage.src = '/img/JpgDecoration/decoration.png';
+            await new Promise((resolve) => {
+                bgImage.onload = resolve;
+            });
+            const bgAspectRatio = bgImage.width / bgImage.height;
+            const canvasAspectRatio = canvas.width / canvas.height;
+            let drawWidth, drawHeight, drawX, drawY;
+
+            if (bgAspectRatio > canvasAspectRatio) {
+                drawHeight = canvas.height / scale;
+                drawWidth = drawHeight * bgAspectRatio;
+                drawX = (canvas.width / scale - drawWidth) / 2;
+                drawY = 0;
+            } else {
+                drawWidth = canvas.width / scale;
+                drawHeight = drawWidth / bgAspectRatio;
+                drawX = 0;
+                drawY = (canvas.height / scale - drawHeight) / 2;
+            }
+
+            ctx.drawImage(bgImage, drawX, drawY, drawWidth, drawHeight);
+
+            // 繪製牌組名稱
+            if (deckName.value) {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+                ctx.fillRect(borderWidth / scale, borderWidth / scale, (canvas.width - 2 * borderWidth) / scale, 40);
+                ctx.font = 'bold 24px Arial';
+                ctx.fillStyle = 'white';
+                ctx.fillText(deckName.value, borderWidth / scale + 10, borderWidth / scale + 30);
+            }
+
+            // 繪製卡片或空白格子
+            for (let i = 0; i < 20; i++) {
+                const x = (i % columns) * (cardWidth / scale + padding / scale) + outerPadding / scale + borderWidth / scale;
+                const y = Math.floor(i / columns) * (cardHeight / scale + padding / scale) + outerPadding / scale + borderWidth / scale + (deckName.value ? 40 : 0);
+
+                if (i < deck.value.length) {
+                    const card = deck.value[i];
                     const img = new Image();
-                    img.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
-                        if (ctx) {
-                            const borderWidth = 10;  // 边框宽度
-                            canvas.width = img.width + borderWidth * 2;
-                            canvas.height = img.height + borderWidth * 2;
-
-                            // 绘制白色边框
-                            ctx.fillStyle = 'white';
-                            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                            // 在边框内绘制原始图像
-                            ctx.drawImage(img, borderWidth, borderWidth);
-
-                            // 添加水印文字
-                            ctx.font = 'bold 24px Arial';
-                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-                            const text = 'pokemon-tcg-pocket-dex.com';
-                            const textWidth = ctx.measureText(text).width;
-                            ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20);
-
-                            // 再次绘制文字，但稍微偏移，创建阴影效果
-                            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                            ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22);
-
-                            // 使用 Blob 和 URL.createObjectURL 来创建下载链接
-                            canvas.toBlob(blob => {
-                                if (blob) {
-                                    const url = URL.createObjectURL(blob);
-                                    const link = document.createElement('a');
-                                    link.download = `${deckName.value || 'deck'}.jpg`;
-                                    link.href = url;
-                                    
-                                    // 对于 Safari，我们使用 window.open 来打开图片
-                                    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-                                        window.open(url, '_blank');
-                                    } else {
-                                        link.click();
-                                    }
-                                    
-                                    setTimeout(() => {
-                                        URL.revokeObjectURL(url);
-                                    }, 100);
-                                }
-                            }, 'image/jpeg', 0.95);
-                        }
-                    };
-                    img.src = dataUrl;
-                } catch (error) {
-                    console.error('导出失败:', error);
-                    alert('导出失败，请稍后再试。');
+                    img.src = card.imageUrl;
+                    await new Promise((resolve) => {
+                        img.onload = resolve;
+                    });
+                    // 縮小卡片 10%
+                    const scaledCardWidth = cardWidth * 0.9 / scale;
+                    const scaledCardHeight = cardHeight * 0.9 / scale;
+                    const offsetX = (cardWidth / scale - scaledCardWidth) / 2;
+                    const offsetY = (cardHeight / scale - scaledCardHeight) / 2;
+                    ctx.drawImage(img, x + offsetX, y + offsetY, scaledCardWidth, scaledCardHeight);
+                } else {
+                    // 繪製空白格子
+                    ctx.fillStyle = '#f0f0f0';
+                    ctx.fillRect(x, y, cardWidth / scale, cardHeight / scale);
+                    ctx.strokeStyle = '#ddd';
+                    ctx.strokeRect(x, y, cardWidth / scale, cardHeight / scale);
                 }
+            }
+
+            // 添加水印
+            ctx.font = 'bold 24px Arial';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+            const text = 'pokemon-tcg-pocket-dex.com';
+            const textWidth = ctx.measureText(text).width;
+            ctx.fillText(text, (canvas.width - textWidth * scale - 20 * scale) / scale, (canvas.height - 20 * scale) / scale);
+
+            return canvas;
+        };
+
+        const exportAsJPG = async () => {
+            showNameInputBox.value = false;
+            try {
+                const canvas = await exportDeckAsImage();
+                if (canvas) {
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+                    const link = document.createElement('a');
+                    link.download = `${deckName.value || 'deck'}.jpg`;
+                    link.href = dataUrl;
+                    link.click();
+                } else {
+                    throw new Error('無法生成圖片');
+                }
+            } catch (error) {
+                console.error('導出失敗:', error);
+                alert('導出失敗，請稍後再試。');
+            }
+        };
+
+        const shareDeck = async () => {
+            try {
+                const canvas = await exportDeckAsImage();
+                if (canvas) {
+                    canvas.toBlob(async (blob) => {
+                        if (blob) {
+                            const file = new File([blob], 'deck.jpg', { type: 'image/jpeg' });
+                            if (navigator.share) {
+                                try {
+                                    await navigator.share({
+                                        files: [file],
+                                        title: deckName.value || '我的牌組',
+                                        text: '查看我的寶可夢卡牌牌組！'
+                                    });
+                                } catch (error) {
+                                    console.error('分享失敗:', error);
+                                    alert('分享失敗，請稍後再試。');
+                                }
+                            } else {
+                                const url = URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.href = url;
+                                link.download = `${deckName.value || 'deck'}.jpg`;
+                                link.click();
+                                setTimeout(() => URL.revokeObjectURL(url), 100);
+                            }
+                        }
+                    }, 'image/jpeg', 0.95);
+                } else {
+                    throw new Error('無法生成圖片');
+                }
+            } catch (error) {
+                console.error('生成圖片失敗:', error);
+                alert('生成圖片失敗，請稍後再試。');
             }
         };
 
@@ -246,96 +324,6 @@ export default defineComponent({
         const toggleFilter = () => {
             isFilterVisible.value = !isFilterVisible.value
         }
-
-        const shareDeck = async () => {
-            if (deckContainer.value) {
-                try {
-                    // 等待所有圖片加載完成
-                    await Promise.all(Array.from(deckContainer.value.querySelectorAll('img')).map(img => {
-                        if (img.complete) return Promise.resolve();
-                        return new Promise(resolve => {
-                            img.onload = img.onerror = resolve;
-                        });
-                    }));
-
-                    // 使用 html-to-image 直接生成圖片
-                    const dataUrl = await toJpeg(deckContainer.value, {
-                        quality: 0.95,
-                        backgroundColor: undefined,
-                        width: deckContainer.value.offsetWidth,
-                        height: deckContainer.value.offsetHeight,
-                        style: {
-                            transform: 'scale(1)',
-                            transformOrigin: 'top left'
-                        }
-                    });
-
-                    // 創建一個新的 canvas 來添加邊框和水印
-                    const img = new Image();
-                    img.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
-                        if (ctx) {
-                            const borderWidth = 10;  // 邊框寬度
-                            canvas.width = img.width + borderWidth * 2;
-                            canvas.height = img.height + borderWidth * 2;
-
-                            // 繪製白色邊框
-                            ctx.fillStyle = 'white';
-                            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                            // 在邊框內繪製原始圖像
-                            ctx.drawImage(img, borderWidth, borderWidth);
-
-                            // 添加水印文字
-                            ctx.font = 'bold 24px Arial';
-                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-                            const text = 'pokemon-tcg-pocket-dex.com';
-                            const textWidth = ctx.measureText(text).width;
-                            ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20);
-
-                            // 再次繪製文字，但稍微偏移，創建陰影效果
-                            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                            ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22);
-
-                            const finalDataUrl = canvas.toDataURL('image/jpeg', 0.9);
-                            const blob = dataURLtoBlob(finalDataUrl);
-                            const file = new File([blob], 'deck.jpg', { type: 'image/jpeg' });
-
-                            if (navigator.share) {
-                                navigator.share({
-                                    files: [file],
-                                    title: deckName.value || '我的牌組',
-                                    text: '查看我的寶可夢卡牌牌組！'
-                                }).catch(console.error);
-                            } else {
-                                const link = document.createElement('a');
-                                link.href = URL.createObjectURL(blob);
-                                link.download = `${deckName.value || 'deck'}.jpg`;
-                                link.click();
-                            }
-                        }
-                    };
-                    img.src = dataUrl;
-                } catch (error) {
-                    console.error('分享失敗:', error);
-                    alert('分享失敗，請稍後再試。');
-                }
-            }
-        };
-
-        // 輔助函數：將 Data URL 轉換為 Blob
-        const dataURLtoBlob = (dataURL: string) => {
-            const arr = dataURL.split(',');
-            const mime = arr[0].match(/:(.*?);/)![1];
-            const bstr = atob(arr[1]);
-            let n = bstr.length;
-            const u8arr = new Uint8Array(n);
-            while (n--) {
-                u8arr[n] = bstr.charCodeAt(n);
-            }
-            return new Blob([u8arr], { type: mime });
-        };
 
         const isCardSelected = (card: Card) => {
             return deck.value.some(c => c.id === card.id);
@@ -452,6 +440,19 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden; /* 添加這行 */
+    position: relative; /* 添加這行 */
+}
+
+.card-slot img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute; /* 添加這行 */
+    top: 0; /* 添加這行 */
+    left: 0; /* 添加這行 */
+    width: 100%; /* 添加這行 */
+    height: 100%; /* 添加這行 */
 }
 
 .card-slot.empty {

@@ -34,7 +34,7 @@ export const cards: Card[] = [
     {
         id: 1,
         name: '妙蛙種子',
-        imageUrl: '/img/GeneticApex/1.jpg',
+        imageUrl: '/img/GeneticApex/1.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -46,7 +46,7 @@ export const cards: Card[] = [
     {
         id: 2,
         name: '妙蛙草',
-        imageUrl: '/img/GeneticApex/2.jpg',
+        imageUrl: '/img/GeneticApex/2.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -58,7 +58,7 @@ export const cards: Card[] = [
     {
         id: 3,
         name: '妙蛙花',
-        imageUrl: '/img/GeneticApex/3.jpg',
+        imageUrl: '/img/GeneticApex/3.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -75,7 +75,7 @@ export const cards: Card[] = [
     {
         id: 4,
         name: '妙蛙花EX',
-        imageUrl: '/img/GeneticApex/4.jpg',
+        imageUrl: '/img/GeneticApex/4.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -93,7 +93,7 @@ export const cards: Card[] = [
     {
         id: 5,
         name: '綠毛蟲',
-        imageUrl: '/img/GeneticApex/5.jpg',
+        imageUrl: '/img/GeneticApex/5.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -109,7 +109,7 @@ export const cards: Card[] = [
     {
         id: 6,
         name: '鐵甲蛹',
-        imageUrl: '/img/GeneticApex/6.jpg',
+        imageUrl: '/img/GeneticApex/6.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -121,7 +121,7 @@ export const cards: Card[] = [
     {
         id: 7,
         name: '巴大蝶',
-        imageUrl: '/img/GeneticApex/7.jpg',
+        imageUrl: '/img/GeneticApex/7.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -134,7 +134,7 @@ export const cards: Card[] = [
     {
         id: 8,
         name: '獨角蟲',
-        imageUrl: '/img/GeneticApex/8.jpg',
+        imageUrl: '/img/GeneticApex/8.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -146,7 +146,7 @@ export const cards: Card[] = [
     {
         id: 9,
         name: '鐵殼蛹',
-        imageUrl: '/img/GeneticApex/9.jpg',
+        imageUrl: '/img/GeneticApex/9.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -158,7 +158,7 @@ export const cards: Card[] = [
     {
         id: 10,
         name: '大針蜂',
-        imageUrl: '/img/GeneticApex/10.jpg',
+        imageUrl: '/img/GeneticApex/10.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -170,7 +170,7 @@ export const cards: Card[] = [
     {
         id: 11,
         name: '走路草',
-        imageUrl: '/img/GeneticApex/11.jpg',
+        imageUrl: '/img/GeneticApex/11.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -182,7 +182,7 @@ export const cards: Card[] = [
     {
         id: 12,
         name: '臭臭花',
-        imageUrl: '/img/GeneticApex/12.jpg',
+        imageUrl: '/img/GeneticApex/12.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -194,7 +194,7 @@ export const cards: Card[] = [
     {
         id: 13,
         name: '霸王花',
-        imageUrl: '/img/GeneticApex/13.jpg',
+        imageUrl: '/img/GeneticApex/13.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -211,7 +211,7 @@ export const cards: Card[] = [
     {
         id: 14,
         name: '派拉斯',
-        imageUrl: '/img/GeneticApex/14.jpg',
+        imageUrl: '/img/GeneticApex/14.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -223,7 +223,7 @@ export const cards: Card[] = [
     {
         id: 15,
         name: '派拉斯特',
-        imageUrl: '/img/GeneticApex/15.jpg',
+        imageUrl: '/img/GeneticApex/15.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -235,7 +235,7 @@ export const cards: Card[] = [
     {
         id: 16,
         name: '毛球',
-        imageUrl: '/img/GeneticApex/16.jpg',
+        imageUrl: '/img/GeneticApex/16.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -247,7 +247,7 @@ export const cards: Card[] = [
     {
         id: 17,
         name: '摩魯蛾',
-        imageUrl: '/img/GeneticApex/17.jpg',
+        imageUrl: '/img/GeneticApex/17.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -264,7 +264,7 @@ export const cards: Card[] = [
     {
         id: 18,
         name: '喇叭芽',
-        imageUrl: '/img/GeneticApex/18.jpg',
+        imageUrl: '/img/GeneticApex/18.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -276,7 +276,7 @@ export const cards: Card[] = [
     {
         id: 19,
         name: '口呆花',
-        imageUrl: '/img/GeneticApex/19.jpg',
+        imageUrl: '/img/GeneticApex/19.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -288,7 +288,7 @@ export const cards: Card[] = [
     {
         id: 20,
         name: '大食花',
-        imageUrl: '/img/GeneticApex/20.jpg',
+        imageUrl: '/img/GeneticApex/20.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -304,7 +304,7 @@ export const cards: Card[] = [
     {
         id: 21,
         name: '蛋蛋',
-        imageUrl: '/img/GeneticApex/21.jpg',
+        imageUrl: '/img/GeneticApex/21.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -316,7 +316,7 @@ export const cards: Card[] = [
     {
         id: 22,
         name: '椰蛋樹',
-        imageUrl: '/img/GeneticApex/22.jpg',
+        imageUrl: '/img/GeneticApex/22.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -333,7 +333,7 @@ export const cards: Card[] = [
     {
         id: 23,
         name: '椰蛋樹EX',
-        imageUrl: '/img/GeneticApex/23.jpg',
+        imageUrl: '/img/GeneticApex/23.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -350,7 +350,7 @@ export const cards: Card[] = [
     {
         id: 24,
         name: '蔓藤怪',
-        imageUrl: '/img/GeneticApex/24.jpg',
+        imageUrl: '/img/GeneticApex/24.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -362,7 +362,7 @@ export const cards: Card[] = [
     {
         id: 25,
         name: '飛天螳螂',
-        imageUrl: '/img/GeneticApex/25.jpg',
+        imageUrl: '/img/GeneticApex/25.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -374,7 +374,7 @@ export const cards: Card[] = [
     {
         id: 26,
         name: '凱羅斯',
-        imageUrl: '/img/GeneticApex/26.jpg',
+        imageUrl: '/img/GeneticApex/26.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -391,7 +391,7 @@ export const cards: Card[] = [
     {
         id: 27,
         name: '木綿球',
-        imageUrl: '/img/GeneticApex/27.jpg',
+        imageUrl: '/img/GeneticApex/27.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -403,7 +403,7 @@ export const cards: Card[] = [
     {
         id: 28,
         name: '風妖精',
-        imageUrl: '/img/GeneticApex/28.jpg',
+        imageUrl: '/img/GeneticApex/28.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -415,7 +415,7 @@ export const cards: Card[] = [
     {
         id: 29,
         name: '百合根娃娃',
-        imageUrl: '/img/GeneticApex/29.jpg',
+        imageUrl: '/img/GeneticApex/29.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -427,7 +427,7 @@ export const cards: Card[] = [
     {
         id: 30,
         name: '裙兒小姐',
-        imageUrl: '/img/GeneticApex/30.jpg',
+        imageUrl: '/img/GeneticApex/30.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -444,7 +444,7 @@ export const cards: Card[] = [
     {
         id: 31,
         name: '坐騎小羊',
-        imageUrl: '/img/GeneticApex/31.jpg',
+        imageUrl: '/img/GeneticApex/31.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -461,7 +461,7 @@ export const cards: Card[] = [
     {
         id: 32,
         name: '坐騎山羊',
-        imageUrl: '/img/GeneticApex/32.jpg',
+        imageUrl: '/img/GeneticApex/32.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -474,7 +474,7 @@ export const cards: Card[] = [
     {
         id: 33,
         name: '小火龍',
-        imageUrl: '/img/GeneticApex/33.jpg',
+        imageUrl: '/img/GeneticApex/33.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -491,7 +491,7 @@ export const cards: Card[] = [
     {
         id: 34,
         name: '火恐龍',
-        imageUrl: '/img/GeneticApex/34.jpg',
+        imageUrl: '/img/GeneticApex/34.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -503,7 +503,7 @@ export const cards: Card[] = [
     {
         id: 35,
         name: '噴火龍',
-        imageUrl: '/img/GeneticApex/35.jpg',
+        imageUrl: '/img/GeneticApex/35.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -520,7 +520,7 @@ export const cards: Card[] = [
     {
         id: 36,
         name: '噴火龍EX',
-        imageUrl: '/img/GeneticApex/36.jpg',
+        imageUrl: '/img/GeneticApex/36.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -538,7 +538,7 @@ export const cards: Card[] = [
     {
         id: 37,
         name: '六尾',
-        imageUrl: '/img/GeneticApex/37.jpg',
+        imageUrl: '/img/GeneticApex/37.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -555,7 +555,7 @@ export const cards: Card[] = [
     {
         id: 38,
         name: '九尾',
-        imageUrl: '/img/GeneticApex/38.jpg',
+        imageUrl: '/img/GeneticApex/38.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -572,7 +572,7 @@ export const cards: Card[] = [
     {
         id: 39,
         name: '卡蒂狗',
-        imageUrl: '/img/GeneticApex/39.jpg',
+        imageUrl: '/img/GeneticApex/39.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -584,7 +584,7 @@ export const cards: Card[] = [
     {
         id: 40,
         name: '風速狗',
-        imageUrl: '/img/GeneticApex/40.jpg',
+        imageUrl: '/img/GeneticApex/40.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -601,7 +601,7 @@ export const cards: Card[] = [
     {
         id: 41,
         name: '風速狗EX',
-        imageUrl: '/img/GeneticApex/41.jpg',
+        imageUrl: '/img/GeneticApex/41.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -618,7 +618,7 @@ export const cards: Card[] = [
     {
         id: 42,
         name: '小火馬',
-        imageUrl: '/img/GeneticApex/42.jpg',
+        imageUrl: '/img/GeneticApex/42.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -630,7 +630,7 @@ export const cards: Card[] = [
     {
         id: 43,
         name: '烈焰馬',
-        imageUrl: '/img/GeneticApex/43.jpg',
+        imageUrl: '/img/GeneticApex/43.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -642,7 +642,7 @@ export const cards: Card[] = [
     {
         id: 44,
         name: '鴨嘴火龍',
-        imageUrl: '/img/GeneticApex/44.jpg',
+        imageUrl: '/img/GeneticApex/44.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -654,7 +654,7 @@ export const cards: Card[] = [
     {
         id: 45,
         name: '火伊布',
-        imageUrl: '/img/GeneticApex/45.jpg',
+        imageUrl: '/img/GeneticApex/45.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -671,7 +671,7 @@ export const cards: Card[] = [
     {
         id: 46,
         name: '火焰鳥',
-        imageUrl: '/img/GeneticApex/46.jpg',
+        imageUrl: '/img/GeneticApex/46.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -688,7 +688,7 @@ export const cards: Card[] = [
     {
         id: 47,
         name: '火焰鳥EX',
-        imageUrl: '/img/GeneticApex/47.jpg',
+        imageUrl: '/img/GeneticApex/47.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -705,7 +705,7 @@ export const cards: Card[] = [
     {
         id: 48,
         name: '熔蟻獸',
-        imageUrl: '/img/GeneticApex/48.jpg',
+        imageUrl: '/img/GeneticApex/48.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -717,7 +717,7 @@ export const cards: Card[] = [
     {
         id: 49,
         name: '夜盜火蜥',
-        imageUrl: '/img/GeneticApex/49.jpg',
+        imageUrl: '/img/GeneticApex/49.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -729,7 +729,7 @@ export const cards: Card[] = [
     {
         id: 50,
         name: '焰后蜥',
-        imageUrl: '/img/GeneticApex/50.jpg',
+        imageUrl: '/img/GeneticApex/50.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -741,7 +741,7 @@ export const cards: Card[] = [
     {
         id: 51,
         name: '焰火蚣',
-        imageUrl: '/img/GeneticApex/51.jpg',
+        imageUrl: '/img/GeneticApex/51.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -753,7 +753,7 @@ export const cards: Card[] = [
     {
         id: 52,
         name: '焚焰蚣',
-        imageUrl: '/img/GeneticApex/52.jpg',
+        imageUrl: '/img/GeneticApex/52.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -765,7 +765,7 @@ export const cards: Card[] = [
     {
         id: 53,
         name: '傑尼龜',
-        imageUrl: '/img/GeneticApex/53.jpg',
+        imageUrl: '/img/GeneticApex/53.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -777,7 +777,7 @@ export const cards: Card[] = [
     {
         id: 54,
         name: '卡咪龜',
-        imageUrl: '/img/GeneticApex/54.jpg',
+        imageUrl: '/img/GeneticApex/54.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -789,7 +789,7 @@ export const cards: Card[] = [
     {
         id: 55,
         name: '水箭龜',
-        imageUrl: '/img/GeneticApex/55.jpg',
+        imageUrl: '/img/GeneticApex/55.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -806,7 +806,7 @@ export const cards: Card[] = [
     {
         id: 56,
         name: '水箭龜EX',
-        imageUrl: '/img/GeneticApex/56.jpg',
+        imageUrl: '/img/GeneticApex/56.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -824,7 +824,7 @@ export const cards: Card[] = [
     {
         id: 57,
         name: '可達鴨',
-        imageUrl: '/img/GeneticApex/57.jpg',
+        imageUrl: '/img/GeneticApex/57.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -841,7 +841,7 @@ export const cards: Card[] = [
     {
         id: 58,
         name: '哥達鴨',
-        imageUrl: '/img/GeneticApex/58.jpg',
+        imageUrl: '/img/GeneticApex/58.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -853,7 +853,7 @@ export const cards: Card[] = [
     {
         id: 59,
         name: '蚊香蝌蚪',
-        imageUrl: '/img/GeneticApex/59.jpg',
+        imageUrl: '/img/GeneticApex/59.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -865,7 +865,7 @@ export const cards: Card[] = [
     {
         id: 60,
         name: '蚊香君',
-        imageUrl: '/img/GeneticApex/60.jpg',
+        imageUrl: '/img/GeneticApex/60.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -877,7 +877,7 @@ export const cards: Card[] = [
     {
         id: 61,
         name: '蚊香泳士',
-        imageUrl: '/img/GeneticApex/61.jpg',
+        imageUrl: '/img/GeneticApex/61.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -890,7 +890,7 @@ export const cards: Card[] = [
     {
         id: 62,
         name: '瑪瑙水母',
-        imageUrl: '/img/GeneticApex/62.jpg',
+        imageUrl: '/img/GeneticApex/62.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -902,7 +902,7 @@ export const cards: Card[] = [
     {
         id: 63,
         name: '毒刺水母',
-        imageUrl: '/img/GeneticApex/63.jpg',
+        imageUrl: '/img/GeneticApex/63.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -919,7 +919,7 @@ export const cards: Card[] = [
     {
         id: 64,
         name: '小海獅',
-        imageUrl: '/img/GeneticApex/64.jpg',
+        imageUrl: '/img/GeneticApex/64.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -931,7 +931,7 @@ export const cards: Card[] = [
     {
         id: 65,
         name: '白海獅',
-        imageUrl: '/img/GeneticApex/65.jpg',
+        imageUrl: '/img/GeneticApex/65.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -943,7 +943,7 @@ export const cards: Card[] = [
     {
         id: 66,
         name: '大舌貝',
-        imageUrl: '/img/GeneticApex/66.jpg',
+        imageUrl: '/img/GeneticApex/66.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -955,7 +955,7 @@ export const cards: Card[] = [
     {
         id: 67,
         name: '刺甲貝',
-        imageUrl: '/img/GeneticApex/67.jpg',
+        imageUrl: '/img/GeneticApex/67.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -968,7 +968,7 @@ export const cards: Card[] = [
     {
         id: 68,
         name: '大鉗蟹',
-        imageUrl: '/img/GeneticApex/68.jpg',
+        imageUrl: '/img/GeneticApex/68.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -980,7 +980,7 @@ export const cards: Card[] = [
     {
         id: 69,
         name: '巨鉗蟹',
-        imageUrl: '/img/GeneticApex/69.jpg',
+        imageUrl: '/img/GeneticApex/69.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -997,7 +997,7 @@ export const cards: Card[] = [
     {
         id: 70,
         name: '墨海馬',
-        imageUrl: '/img/GeneticApex/70.jpg',
+        imageUrl: '/img/GeneticApex/70.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1009,7 +1009,7 @@ export const cards: Card[] = [
     {
         id: 71,
         name: '海刺龍',
-        imageUrl: '/img/GeneticApex/71.jpg',
+        imageUrl: '/img/GeneticApex/71.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1025,7 +1025,7 @@ export const cards: Card[] = [
     {
         id: 72,
         name: '角金魚',
-        imageUrl: '/img/GeneticApex/72.jpg',
+        imageUrl: '/img/GeneticApex/72.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1037,7 +1037,7 @@ export const cards: Card[] = [
     {
         id: 73,
         name: '金魚王',
-        imageUrl: '/img/GeneticApex/73.jpg',
+        imageUrl: '/img/GeneticApex/73.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1054,7 +1054,7 @@ export const cards: Card[] = [
     {
         id: 74,
         name: '海星星',
-        imageUrl: '/img/GeneticApex/74.jpg',
+        imageUrl: '/img/GeneticApex/74.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1066,7 +1066,7 @@ export const cards: Card[] = [
     {
         id: 75,
         name: '寶石海星',
-        imageUrl: '/img/GeneticApex/75.jpg',
+        imageUrl: '/img/GeneticApex/75.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1078,7 +1078,7 @@ export const cards: Card[] = [
     {
         id: 76,
         name: '寶石海星EX',
-        imageUrl: '/img/GeneticApex/76.jpg',
+        imageUrl: '/img/GeneticApex/76.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1090,7 +1090,7 @@ export const cards: Card[] = [
     {
         id: 77,
         name: '鯉魚王',
-        imageUrl: '/img/GeneticApex/77.jpg',
+        imageUrl: '/img/GeneticApex/77.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1102,7 +1102,7 @@ export const cards: Card[] = [
     {
         id: 78,
         name: '暴鯉龍',
-        imageUrl: '/img/GeneticApex/78.jpg',
+        imageUrl: '/img/GeneticApex/78.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1119,7 +1119,7 @@ export const cards: Card[] = [
     {
         id: 79,
         name: '拉普拉斯',
-        imageUrl: '/img/GeneticApex/79.jpg',
+        imageUrl: '/img/GeneticApex/79.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1136,7 +1136,7 @@ export const cards: Card[] = [
     {
         id: 80,
         name: '水伊布',
-        imageUrl: '/img/GeneticApex/80.jpg',
+        imageUrl: '/img/GeneticApex/80.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1153,7 +1153,7 @@ export const cards: Card[] = [
     {
         id: 81,
         name: '菊石獸',
-        imageUrl: '/img/GeneticApex/81.jpg',
+        imageUrl: '/img/GeneticApex/81.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1165,7 +1165,7 @@ export const cards: Card[] = [
     {
         id: 82,
         name: '多刺菊石獸',
-        imageUrl: '/img/GeneticApex/82.jpg',
+        imageUrl: '/img/GeneticApex/82.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1182,7 +1182,7 @@ export const cards: Card[] = [
     {
         id: 83,
         name: '急凍鳥',
-        imageUrl: '/img/GeneticApex/83.jpg',
+        imageUrl: '/img/GeneticApex/83.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1199,7 +1199,7 @@ export const cards: Card[] = [
     {
         id: 84,
         name: '急凍鳥EX',
-        imageUrl: '/img/GeneticApex/84.jpg',
+        imageUrl: '/img/GeneticApex/84.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1217,7 +1217,7 @@ export const cards: Card[] = [
     {
         id: 85,
         name: '鴨寶寶',
-        imageUrl: '/img/GeneticApex/85.jpg',
+        imageUrl: '/img/GeneticApex/85.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1229,7 +1229,7 @@ export const cards: Card[] = [
     {
         id: 86,
         name: '舞天鵝',
-        imageUrl: '/img/GeneticApex/86.jpg',
+        imageUrl: '/img/GeneticApex/86.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1241,7 +1241,7 @@ export const cards: Card[] = [
     {
         id: 87,
         name: '呱呱泡蛙',
-        imageUrl: '/img/GeneticApex/87.jpg',
+        imageUrl: '/img/GeneticApex/87.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1253,7 +1253,7 @@ export const cards: Card[] = [
     {
         id: 88,
         name: '呱頭蛙',
-        imageUrl: '/img/GeneticApex/88.jpg',
+        imageUrl: '/img/GeneticApex/88.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1265,7 +1265,7 @@ export const cards: Card[] = [
     {
         id: 89,
         name: '甲賀忍蛙',
-        imageUrl: '/img/GeneticApex/89.jpg',
+        imageUrl: '/img/GeneticApex/89.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1278,7 +1278,7 @@ export const cards: Card[] = [
     {
         id: 90,
         name: '拳海參',
-        imageUrl: '/img/GeneticApex/90.jpg',
+        imageUrl: '/img/GeneticApex/90.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1290,7 +1290,7 @@ export const cards: Card[] = [
     {
         id: 91,
         name: '磨牙彩皮魚',
-        imageUrl: '/img/GeneticApex/91.jpg',
+        imageUrl: '/img/GeneticApex/91.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1307,7 +1307,7 @@ export const cards: Card[] = [
     {
         id: 92,
         name: '雪吞蟲',
-        imageUrl: '/img/GeneticApex/92.jpg',
+        imageUrl: '/img/GeneticApex/92.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1319,7 +1319,7 @@ export const cards: Card[] = [
     {
         id: 93,
         name: '雪絨蛾',
-        imageUrl: '/img/GeneticApex/93.jpg',
+        imageUrl: '/img/GeneticApex/93.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1336,7 +1336,7 @@ export const cards: Card[] = [
     {
         id: 94,
         name: '皮卡丘',
-        imageUrl: '/img/GeneticApex/94.jpg',
+        imageUrl: '/img/GeneticApex/94.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1348,7 +1348,7 @@ export const cards: Card[] = [
     {
         id: 95,
         name: '雷丘',
-        imageUrl: '/img/GeneticApex/95.jpg',
+        imageUrl: '/img/GeneticApex/95.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1365,7 +1365,7 @@ export const cards: Card[] = [
     {
         id: 96,
         name: '皮卡丘EX',
-        imageUrl: '/img/GeneticApex/96.jpg',
+        imageUrl: '/img/GeneticApex/96.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1382,7 +1382,7 @@ export const cards: Card[] = [
     {
         id: 97,
         name: '小磁怪',
-        imageUrl: '/img/GeneticApex/97.jpg',
+        imageUrl: '/img/GeneticApex/97.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1394,7 +1394,7 @@ export const cards: Card[] = [
     {
         id: 98,
         name: '三合一磁怪',
-        imageUrl: '/img/GeneticApex/98.jpg',
+        imageUrl: '/img/GeneticApex/98.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1406,7 +1406,7 @@ export const cards: Card[] = [
     {
         id: 99,
         name: '霹靂電球',
-        imageUrl: '/img/GeneticApex/99.jpg',
+        imageUrl: '/img/GeneticApex/99.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1418,7 +1418,7 @@ export const cards: Card[] = [
     {
         id: 100,
         name: '頑皮雷彈',
-        imageUrl: '/img/GeneticApex/100.jpg',
+        imageUrl: '/img/GeneticApex/100.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1430,7 +1430,7 @@ export const cards: Card[] = [
     {
         id: 101,
         name: '電擊獸',
-        imageUrl: '/img/GeneticApex/101.jpg',
+        imageUrl: '/img/GeneticApex/101.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1447,7 +1447,7 @@ export const cards: Card[] = [
     {
         id: 102,
         name: '雷伊布',
-        imageUrl: '/img/GeneticApex/102.jpg',
+        imageUrl: '/img/GeneticApex/102.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1464,7 +1464,7 @@ export const cards: Card[] = [
     {
         id: 103,
         name: '閃電鳥',
-        imageUrl: '/img/GeneticApex/103.jpg',
+        imageUrl: '/img/GeneticApex/103.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1481,7 +1481,7 @@ export const cards: Card[] = [
     {
         id: 104,
         name: '閃電鳥EX',
-        imageUrl: '/img/GeneticApex/104.jpg',
+        imageUrl: '/img/GeneticApex/104.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1499,7 +1499,7 @@ export const cards: Card[] = [
     {
         id: 105,
         name: '斑斑馬',
-        imageUrl: '/img/GeneticApex/105.jpg',
+        imageUrl: '/img/GeneticApex/105.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1511,7 +1511,7 @@ export const cards: Card[] = [
     {
         id: 106,
         name: '雷電斑馬',
-        imageUrl: '/img/GeneticApex/106.jpg',
+        imageUrl: '/img/GeneticApex/106.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1523,7 +1523,7 @@ export const cards: Card[] = [
     {
         id: 107,
         name: '麻麻小魚',
-        imageUrl: '/img/GeneticApex/107.jpg',
+        imageUrl: '/img/GeneticApex/107.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1535,7 +1535,7 @@ export const cards: Card[] = [
     {
         id: 108,
         name: '麻麻鰻',
-        imageUrl: '/img/GeneticApex/108.jpg',
+        imageUrl: '/img/GeneticApex/108.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1547,7 +1547,7 @@ export const cards: Card[] = [
     {
         id: 109,
         name: '麻麻鰻魚王',
-        imageUrl: '/img/GeneticApex/109.jpg',
+        imageUrl: '/img/GeneticApex/109.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1564,7 +1564,7 @@ export const cards: Card[] = [
     {
         id: 110,
         name: '傘電蜥',
-        imageUrl: '/img/GeneticApex/110.jpg',
+        imageUrl: '/img/GeneticApex/110.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1576,7 +1576,7 @@ export const cards: Card[] = [
     {
         id: 111,
         name: '光電傘蜥',
-        imageUrl: '/img/GeneticApex/111.jpg',
+        imageUrl: '/img/GeneticApex/111.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1593,7 +1593,7 @@ export const cards: Card[] = [
     {
         id: 112,
         name: '啪嚓海膽',
-        imageUrl: '/img/GeneticApex/112.jpg',
+        imageUrl: '/img/GeneticApex/112.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1610,7 +1610,7 @@ export const cards: Card[] = [
     {
         id: 113,
         name: '皮皮',
-        imageUrl: '/img/GeneticApex/113.jpg',
+        imageUrl: '/img/GeneticApex/113.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1622,7 +1622,7 @@ export const cards: Card[] = [
     {
         id: 114,
         name: '皮克西',
-        imageUrl: '/img/GeneticApex/114.jpg',
+        imageUrl: '/img/GeneticApex/114.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1634,7 +1634,7 @@ export const cards: Card[] = [
     {
         id: 115,
         name: '凱西',
-        imageUrl: '/img/GeneticApex/115.jpg',
+        imageUrl: '/img/GeneticApex/115.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1646,7 +1646,7 @@ export const cards: Card[] = [
     {
         id: 116,
         name: '勇基拉',
-        imageUrl: '/img/GeneticApex/116.jpg',
+        imageUrl: '/img/GeneticApex/116.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1658,7 +1658,7 @@ export const cards: Card[] = [
     {
         id: 117,
         name: '胡地',
-        imageUrl: '/img/GeneticApex/117.jpg',
+        imageUrl: '/img/GeneticApex/117.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1675,7 +1675,7 @@ export const cards: Card[] = [
     {
         id: 118,
         name: '呆呆獸',
-        imageUrl: '/img/GeneticApex/118.jpg',
+        imageUrl: '/img/GeneticApex/118.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1687,7 +1687,7 @@ export const cards: Card[] = [
     {
         id: 119,
         name: '呆殼獸',
-        imageUrl: '/img/GeneticApex/119.jpg',
+        imageUrl: '/img/GeneticApex/119.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1699,7 +1699,7 @@ export const cards: Card[] = [
     {
         id: 120,
         name: '鬼斯',
-        imageUrl: '/img/GeneticApex/120.jpg',
+        imageUrl: '/img/GeneticApex/120.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1711,7 +1711,7 @@ export const cards: Card[] = [
     {
         id: 121,
         name: '鬼斯通',
-        imageUrl: '/img/GeneticApex/121.jpg',
+        imageUrl: '/img/GeneticApex/121.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1723,7 +1723,7 @@ export const cards: Card[] = [
     {
         id: 122,
         name: '耿鬼',
-        imageUrl: '/img/GeneticApex/122.jpg',
+        imageUrl: '/img/GeneticApex/122.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1740,7 +1740,7 @@ export const cards: Card[] = [
     {
         id: 123,
         name: '耿鬼EX',
-        imageUrl: '/img/GeneticApex/123.jpg',
+        imageUrl: '/img/GeneticApex/123.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1753,7 +1753,7 @@ export const cards: Card[] = [
     {
         id: 124,
         name: '催眠貘',
-        imageUrl: '/img/GeneticApex/124.jpg',
+        imageUrl: '/img/GeneticApex/124.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1765,7 +1765,7 @@ export const cards: Card[] = [
     {
         id: 125,
         name: '引夢貘人',
-        imageUrl: '/img/GeneticApex/125.jpg',
+        imageUrl: '/img/GeneticApex/125.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1778,7 +1778,7 @@ export const cards: Card[] = [
     {
         id: 126,
         name: '魔牆人偶',
-        imageUrl: '/img/GeneticApex/126.jpg',
+        imageUrl: '/img/GeneticApex/126.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1795,7 +1795,7 @@ export const cards: Card[] = [
     {
         id: 127,
         name: '迷唇姐',
-        imageUrl: '/img/GeneticApex/127.jpg',
+        imageUrl: '/img/GeneticApex/127.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1812,7 +1812,7 @@ export const cards: Card[] = [
     {
         id: 128,
         name: '超夢',
-        imageUrl: '/img/GeneticApex/128.jpg',
+        imageUrl: '/img/GeneticApex/128.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1829,7 +1829,7 @@ export const cards: Card[] = [
     {
         id: 129,
         name: '超夢EX',
-        imageUrl: '/img/GeneticApex/129.jpg',
+        imageUrl: '/img/GeneticApex/129.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -1847,7 +1847,7 @@ export const cards: Card[] = [
     {
         id: 130,
         name: '拉魯拉斯',
-        imageUrl: '/img/GeneticApex/130.jpg',
+        imageUrl: '/img/GeneticApex/130.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1859,7 +1859,7 @@ export const cards: Card[] = [
     {
         id: 131,
         name: '奇魯莉安',
-        imageUrl: '/img/GeneticApex/131.jpg',
+        imageUrl: '/img/GeneticApex/131.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1871,7 +1871,7 @@ export const cards: Card[] = [
     {
         id: 132,
         name: '沙奈朵',
-        imageUrl: '/img/GeneticApex/132.jpg',
+        imageUrl: '/img/GeneticApex/132.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -1887,7 +1887,7 @@ export const cards: Card[] = [
     {
         id: 133,
         name: '滾滾蝙蝠',
-        imageUrl: '/img/GeneticApex/133.jpg',
+        imageUrl: '/img/GeneticApex/133.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1899,7 +1899,7 @@ export const cards: Card[] = [
     {
         id: 134,
         name: '心蝙蝠',
-        imageUrl: '/img/GeneticApex/134.jpg',
+        imageUrl: '/img/GeneticApex/134.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1911,7 +1911,7 @@ export const cards: Card[] = [
     {
         id: 135,
         name: '泥偶小人',
-        imageUrl: '/img/GeneticApex/135.jpg',
+        imageUrl: '/img/GeneticApex/135.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1923,7 +1923,7 @@ export const cards: Card[] = [
     {
         id: 136,
         name: '泥偶巨人',
-        imageUrl: '/img/GeneticApex/136.jpg',
+        imageUrl: '/img/GeneticApex/136.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1941,7 +1941,7 @@ export const cards: Card[] = [
     {
         id: 137,
         name: '穿山鼠',
-        imageUrl: '/img/GeneticApex/137.jpg',
+        imageUrl: '/img/GeneticApex/137.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1953,7 +1953,7 @@ export const cards: Card[] = [
     {
         id: 138,
         name: '穿山王',
-        imageUrl: '/img/GeneticApex/138.jpg',
+        imageUrl: '/img/GeneticApex/138.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1965,7 +1965,7 @@ export const cards: Card[] = [
     {
         id: 139,
         name: '地鼠',
-        imageUrl: '/img/GeneticApex/139.jpg',
+        imageUrl: '/img/GeneticApex/139.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -1977,7 +1977,7 @@ export const cards: Card[] = [
     {
         id: 140,
         name: '三地鼠',
-        imageUrl: '/img/GeneticApex/140.jpg',
+        imageUrl: '/img/GeneticApex/140.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -1994,7 +1994,7 @@ export const cards: Card[] = [
     {
         id: 141,
         name: '猴怪',
-        imageUrl: '/img/GeneticApex/141.jpg',
+        imageUrl: '/img/GeneticApex/141.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2006,7 +2006,7 @@ export const cards: Card[] = [
     {
         id: 142,
         name: '火爆猴',
-        imageUrl: '/img/GeneticApex/142.jpg',
+        imageUrl: '/img/GeneticApex/142.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2023,7 +2023,7 @@ export const cards: Card[] = [
     {
         id: 143,
         name: '腕力',
-        imageUrl: '/img/GeneticApex/143.jpg',
+        imageUrl: '/img/GeneticApex/143.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2035,7 +2035,7 @@ export const cards: Card[] = [
     {
         id: 144,
         name: '豪力',
-        imageUrl: '/img/GeneticApex/144.jpg',
+        imageUrl: '/img/GeneticApex/144.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2047,7 +2047,7 @@ export const cards: Card[] = [
     {
         id: 145,
         name: '怪力',
-        imageUrl: '/img/GeneticApex/145.jpg',
+        imageUrl: '/img/GeneticApex/145.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2059,7 +2059,7 @@ export const cards: Card[] = [
     {
         id: 146,
         name: '怪力EX',
-        imageUrl: '/img/GeneticApex/146.jpg',
+        imageUrl: '/img/GeneticApex/146.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -2071,7 +2071,7 @@ export const cards: Card[] = [
     {
         id: 147,
         name: '小拳石',
-        imageUrl: '/img/GeneticApex/147.jpg',
+        imageUrl: '/img/GeneticApex/147.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2083,7 +2083,7 @@ export const cards: Card[] = [
     {
         id: 148,
         name: '隆隆石',
-        imageUrl: '/img/GeneticApex/148.jpg',
+        imageUrl: '/img/GeneticApex/148.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2095,7 +2095,7 @@ export const cards: Card[] = [
     {
         id: 149,
         name: '隆隆岩',
-        imageUrl: '/img/GeneticApex/149.jpg',
+        imageUrl: '/img/GeneticApex/149.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2112,7 +2112,7 @@ export const cards: Card[] = [
     {
         id: 150,
         name: '大岩蛇',
-        imageUrl: '/img/GeneticApex/150.jpg',
+        imageUrl: '/img/GeneticApex/150.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2124,7 +2124,7 @@ export const cards: Card[] = [
     {
         id: 151,
         name: '卡拉卡拉',
-        imageUrl: '/img/GeneticApex/151.jpg',
+        imageUrl: '/img/GeneticApex/151.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2140,7 +2140,7 @@ export const cards: Card[] = [
     {
         id: 152,
         name: '嘎啦嘎啦',
-        imageUrl: '/img/GeneticApex/152.jpg',
+        imageUrl: '/img/GeneticApex/152.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2152,7 +2152,7 @@ export const cards: Card[] = [
     {
         id: 153,
         name: '嘎啦嘎啦EX',
-        imageUrl: '/img/GeneticApex/153.jpg',
+        imageUrl: '/img/GeneticApex/153.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -2169,7 +2169,7 @@ export const cards: Card[] = [
     {
         id: 154,
         name: '飛腿郎',
-        imageUrl: '/img/GeneticApex/154.jpg',
+        imageUrl: '/img/GeneticApex/154.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2185,7 +2185,7 @@ export const cards: Card[] = [
     {
         id: 155,
         name: '快拳郎',
-        imageUrl: '/img/GeneticApex/155.jpg',
+        imageUrl: '/img/GeneticApex/155.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2197,7 +2197,7 @@ export const cards: Card[] = [
     {
         id: 156,
         name: '獨角犀牛',
-        imageUrl: '/img/GeneticApex/156.jpg',
+        imageUrl: '/img/GeneticApex/156.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2209,7 +2209,7 @@ export const cards: Card[] = [
     {
         id: 157,
         name: '鐵甲犀獸',
-        imageUrl: '/img/GeneticApex/157.jpg',
+        imageUrl: '/img/GeneticApex/157.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2221,7 +2221,7 @@ export const cards: Card[] = [
     {
         id: 158,
         name: '化石盔',
-        imageUrl: '/img/GeneticApex/158.jpg',
+        imageUrl: '/img/GeneticApex/158.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2233,7 +2233,7 @@ export const cards: Card[] = [
     {
         id: 159,
         name: '鐮刀盔',
-        imageUrl: '/img/GeneticApex/159.jpg',
+        imageUrl: '/img/GeneticApex/159.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2250,7 +2250,7 @@ export const cards: Card[] = [
     {
         id: 160,
         name: '功夫鼬',
-        imageUrl: '/img/GeneticApex/160.jpg',
+        imageUrl: '/img/GeneticApex/160.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2262,7 +2262,7 @@ export const cards: Card[] = [
     {
         id: 161,
         name: '師父鼬',
-        imageUrl: '/img/GeneticApex/161.jpg',
+        imageUrl: '/img/GeneticApex/161.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2274,7 +2274,7 @@ export const cards: Card[] = [
     {
         id: 162,
         name: '拳拳蛸',
-        imageUrl: '/img/GeneticApex/162.jpg',
+        imageUrl: '/img/GeneticApex/162.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2286,7 +2286,7 @@ export const cards: Card[] = [
     {
         id: 163,
         name: '八爪武師',
-        imageUrl: '/img/GeneticApex/163.jpg',
+        imageUrl: '/img/GeneticApex/163.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2303,7 +2303,7 @@ export const cards: Card[] = [
     {
         id: 164,
         name: '阿柏蛇',
-        imageUrl: '/img/GeneticApex/164.jpg',
+        imageUrl: '/img/GeneticApex/164.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2315,7 +2315,7 @@ export const cards: Card[] = [
     {
         id: 165,
         name: '阿柏怪',
-        imageUrl: '/img/GeneticApex/165.jpg',
+        imageUrl: '/img/GeneticApex/165.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2332,7 +2332,7 @@ export const cards: Card[] = [
     {
         id: 166,
         name: '尼多蘭',
-        imageUrl: '/img/GeneticApex/166.jpg',
+        imageUrl: '/img/GeneticApex/166.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2348,7 +2348,7 @@ export const cards: Card[] = [
     {
         id: 167,
         name: '尼多娜',
-        imageUrl: '/img/GeneticApex/167.jpg',
+        imageUrl: '/img/GeneticApex/167.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2360,7 +2360,7 @@ export const cards: Card[] = [
     {
         id: 168,
         name: '尼多后',
-        imageUrl: '/img/GeneticApex/168.jpg',
+        imageUrl: '/img/GeneticApex/168.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2377,7 +2377,7 @@ export const cards: Card[] = [
     {
         id: 169,
         name: '尼多郎',
-        imageUrl: '/img/GeneticApex/169.jpg',
+        imageUrl: '/img/GeneticApex/169.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2389,7 +2389,7 @@ export const cards: Card[] = [
     {
         id: 170,
         name: '尼多力諾',
-        imageUrl: '/img/GeneticApex/170.jpg',
+        imageUrl: '/img/GeneticApex/170.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2401,7 +2401,7 @@ export const cards: Card[] = [
     {
         id: 171,
         name: '尼多王',
-        imageUrl: '/img/GeneticApex/171.jpg',
+        imageUrl: '/img/GeneticApex/171.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2413,7 +2413,7 @@ export const cards: Card[] = [
     {
         id: 172,
         name: '超音蝠',
-        imageUrl: '/img/GeneticApex/172.jpg',
+        imageUrl: '/img/GeneticApex/172.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2425,7 +2425,7 @@ export const cards: Card[] = [
     {
         id: 173,
         name: '大嘴蝠',
-        imageUrl: '/img/GeneticApex/173.jpg',
+        imageUrl: '/img/GeneticApex/173.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2437,7 +2437,7 @@ export const cards: Card[] = [
     {
         id: 174,
         name: '臭泥',
-        imageUrl: '/img/GeneticApex/174.jpg',
+        imageUrl: '/img/GeneticApex/174.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2454,7 +2454,7 @@ export const cards: Card[] = [
     {
         id: 175,
         name: '臭臭泥',
-        imageUrl: '/img/GeneticApex/175.jpg',
+        imageUrl: '/img/GeneticApex/175.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2471,7 +2471,7 @@ export const cards: Card[] = [
     {
         id: 176,
         name: '瓦斯彈',
-        imageUrl: '/img/GeneticApex/176.jpg',
+        imageUrl: '/img/GeneticApex/176.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2483,7 +2483,7 @@ export const cards: Card[] = [
     {
         id: 177,
         name: '雙彈瓦斯',
-        imageUrl: '/img/GeneticApex/177.jpg',
+        imageUrl: '/img/GeneticApex/177.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2499,7 +2499,7 @@ export const cards: Card[] = [
     {
         id: 178,
         name: '大嘴娃',
-        imageUrl: '/img/GeneticApex/178.jpg',
+        imageUrl: '/img/GeneticApex/178.webp',
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2516,7 +2516,7 @@ export const cards: Card[] = [
     {
         id: 179,
         name: '鋼刀小兵',
-        imageUrl: '/img/GeneticApex/179.jpg',
+        imageUrl: '/img/GeneticApex/179.webp',
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2528,7 +2528,7 @@ export const cards: Card[] = [
     {
         id: 180,
         name: '劈斬司令',
-        imageUrl: '/img/GeneticApex/180.jpg',
+        imageUrl: '/img/GeneticApex/180.webp',
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2540,7 +2540,7 @@ export const cards: Card[] = [
     {
         id: 181,
         name: '美錄坦',
-        imageUrl: '/img/GeneticApex/181.jpg',
+        imageUrl: '/img/GeneticApex/181.webp',
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2556,7 +2556,7 @@ export const cards: Card[] = [
     {
         id: 182,
         name: '美錄梅塔',
-        imageUrl: '/img/GeneticApex/182.jpg',
+        imageUrl: '/img/GeneticApex/182.webp',
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2570,7 +2570,7 @@ export const cards: Card[] = [
     {
         id: 183,
         name: '迷你龍',
-        imageUrl: '/img/GeneticApex/183.jpg',
+        imageUrl: '/img/GeneticApex/183.webp',
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2581,7 +2581,7 @@ export const cards: Card[] = [
     {
         id: 184,
         name: '哈克龍',
-        imageUrl: '/img/GeneticApex/184.jpg',
+        imageUrl: '/img/GeneticApex/184.webp',
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2592,7 +2592,7 @@ export const cards: Card[] = [
     {
         id: 185,
         name: '快龍',
-        imageUrl: '/img/GeneticApex/185.jpg',
+        imageUrl: '/img/GeneticApex/185.webp',
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2607,7 +2607,7 @@ export const cards: Card[] = [
     {
         id: 186,
         name: '波波',
-        imageUrl: '/img/GeneticApex/186.jpg',
+        imageUrl: '/img/GeneticApex/186.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2619,7 +2619,7 @@ export const cards: Card[] = [
     {
         id: 187,
         name: '比比鳥',
-        imageUrl: '/img/GeneticApex/187.jpg',
+        imageUrl: '/img/GeneticApex/187.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2631,7 +2631,7 @@ export const cards: Card[] = [
     {
         id: 188,
         name: '大比鳥',
-        imageUrl: '/img/GeneticApex/188.jpg',
+        imageUrl: '/img/GeneticApex/188.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2647,7 +2647,7 @@ export const cards: Card[] = [
     {
         id: 189,
         name: '小拉達',
-        imageUrl: '/img/GeneticApex/189.jpg',
+        imageUrl: '/img/GeneticApex/189.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2659,7 +2659,7 @@ export const cards: Card[] = [
     {
         id: 190,
         name: '拉達',
-        imageUrl: '/img/GeneticApex/190.jpg',
+        imageUrl: '/img/GeneticApex/190.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2671,7 +2671,7 @@ export const cards: Card[] = [
     {
         id: 191,
         name: '烈雀',
-        imageUrl: '/img/GeneticApex/191.jpg',
+        imageUrl: '/img/GeneticApex/191.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2683,7 +2683,7 @@ export const cards: Card[] = [
     {
         id: 192,
         name: '大嘴雀',
-        imageUrl: '/img/GeneticApex/192.jpg',
+        imageUrl: '/img/GeneticApex/192.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2700,7 +2700,7 @@ export const cards: Card[] = [
     {
         id: 193,
         name: '胖丁',
-        imageUrl: '/img/GeneticApex/193.jpg',
+        imageUrl: '/img/GeneticApex/193.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2712,7 +2712,7 @@ export const cards: Card[] = [
     {
         id: 194,
         name: '胖可丁',
-        imageUrl: '/img/GeneticApex/194.jpg',
+        imageUrl: '/img/GeneticApex/194.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2724,7 +2724,7 @@ export const cards: Card[] = [
     {
         id: 195,
         name: '胖可丁EX',
-        imageUrl: '/img/GeneticApex/195.jpg',
+        imageUrl: '/img/GeneticApex/195.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
@@ -2741,7 +2741,7 @@ export const cards: Card[] = [
     {
         id: 196,
         name: '喵喵',
-        imageUrl: '/img/GeneticApex/196.jpg',
+        imageUrl: '/img/GeneticApex/196.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2753,7 +2753,7 @@ export const cards: Card[] = [
     {
         id: 197,
         name: '喵老大',
-        imageUrl: '/img/GeneticApex/197.jpg',
+        imageUrl: '/img/GeneticApex/197.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2770,7 +2770,7 @@ export const cards: Card[] = [
     {
         id: 198,
         name: '大蔥鴨',
-        imageUrl: '/img/GeneticApex/198.jpg',
+        imageUrl: '/img/GeneticApex/198.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2782,7 +2782,7 @@ export const cards: Card[] = [
     {
         id: 199,
         name: '嘟嘟',
-        imageUrl: '/img/GeneticApex/199.jpg',
+        imageUrl: '/img/GeneticApex/199.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2794,7 +2794,7 @@ export const cards: Card[] = [
     {
         id: 200,
         name: '嘟嘟利',
-        imageUrl: '/img/GeneticApex/200.jpg',
+        imageUrl: '/img/GeneticApex/200.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2805,7 +2805,7 @@ export const cards: Card[] = [
     {
         id: 201,
         name: '大舌頭',
-        imageUrl: '/img/GeneticApex/201.jpg',
+        imageUrl: '/img/GeneticApex/201.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2822,7 +2822,7 @@ export const cards: Card[] = [
     {
         id: 202,
         name: '吉利蛋',
-        imageUrl: '/img/GeneticApex/202.jpg',
+        imageUrl: '/img/GeneticApex/202.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2834,7 +2834,7 @@ export const cards: Card[] = [
     {
         id: 203,
         name: '袋龍',
-        imageUrl: '/img/GeneticApex/203.jpg',
+        imageUrl: '/img/GeneticApex/203.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2851,7 +2851,7 @@ export const cards: Card[] = [
     {
         id: 204,
         name: '肯泰羅',
-        imageUrl: '/img/GeneticApex/204.jpg',
+        imageUrl: '/img/GeneticApex/204.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2863,7 +2863,7 @@ export const cards: Card[] = [
     {
         id: 205,
         name: '百變怪',
-        imageUrl: '/img/GeneticApex/205.jpg',
+        imageUrl: '/img/GeneticApex/205.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2880,7 +2880,7 @@ export const cards: Card[] = [
     {
         id: 206,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/206.jpg',
+        imageUrl: '/img/GeneticApex/206.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2892,7 +2892,7 @@ export const cards: Card[] = [
     {
         id: 207,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/207.jpg',
+        imageUrl: '/img/GeneticApex/207.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2904,7 +2904,7 @@ export const cards: Card[] = [
     {
         id: 208,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/208.jpg',
+        imageUrl: '/img/GeneticApex/208.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2916,7 +2916,7 @@ export const cards: Card[] = [
     {
         id: 209,
         name: '多邊獸',
-        imageUrl: '/img/GeneticApex/209.jpg',
+        imageUrl: '/img/GeneticApex/209.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2929,7 +2929,7 @@ export const cards: Card[] = [
     {
         id: 210,
         name: '化石翼龍',
-        imageUrl: '/img/GeneticApex/210.jpg',
+        imageUrl: '/img/GeneticApex/210.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2945,7 +2945,7 @@ export const cards: Card[] = [
     {
         id: 211,
         name: '卡比獸',
-        imageUrl: '/img/GeneticApex/211.jpg',
+        imageUrl: '/img/GeneticApex/211.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
@@ -2957,7 +2957,7 @@ export const cards: Card[] = [
     {
         id: 212,
         name: '泡沫栗鼠',
-        imageUrl: '/img/GeneticApex/212.jpg',
+        imageUrl: '/img/GeneticApex/212.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2969,7 +2969,7 @@ export const cards: Card[] = [
     {
         id: 213,
         name: '奇諾栗鼠',
-        imageUrl: '/img/GeneticApex/213.jpg',
+        imageUrl: '/img/GeneticApex/213.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
@@ -2986,7 +2986,7 @@ export const cards: Card[] = [
     {
         id: 214,
         name: '毛辮羊',
-        imageUrl: '/img/GeneticApex/214.jpg',
+        imageUrl: '/img/GeneticApex/214.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2998,7 +2998,7 @@ export const cards: Card[] = [
     {
         id: 215,
         name: '毛毛角羊',
-        imageUrl: '/img/GeneticApex/215.jpg',
+        imageUrl: '/img/GeneticApex/215.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3010,7 +3010,7 @@ export const cards: Card[] = [
     {
         id: 216,
         name: '貝殼化石',
-        imageUrl: '/img/GeneticApex/216.jpg',
+        imageUrl: '/img/GeneticApex/216.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3020,7 +3020,7 @@ export const cards: Card[] = [
     {
         id: 217,
         name: '甲殼化石',
-        imageUrl: '/img/GeneticApex/217.jpg',
+        imageUrl: '/img/GeneticApex/217.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3030,7 +3030,7 @@ export const cards: Card[] = [
     {
         id: 218,
         name: '秘密琥珀',
-        imageUrl: '/img/GeneticApex/218.jpg',
+        imageUrl: '/img/GeneticApex/218.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3040,7 +3040,7 @@ export const cards: Card[] = [
     {
         id: 219,
         name: '莉佳',
-        imageUrl: '/img/GeneticApex/219.jpg',
+        imageUrl: '/img/GeneticApex/219.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3049,7 +3049,7 @@ export const cards: Card[] = [
     {
         id: 220,
         name: '小霞',
-        imageUrl: '/img/GeneticApex/220.jpg',
+        imageUrl: '/img/GeneticApex/220.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3058,7 +3058,7 @@ export const cards: Card[] = [
     {
         id: 221,
         name: '夏伯',
-        imageUrl: '/img/GeneticApex/221.jpg',
+        imageUrl: '/img/GeneticApex/221.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3067,7 +3067,7 @@ export const cards: Card[] = [
     {
         id: 222,
         name: '阿桔',
-        imageUrl: '/img/GeneticApex/222.jpg',
+        imageUrl: '/img/GeneticApex/222.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3076,7 +3076,7 @@ export const cards: Card[] = [
     {
         id: 223,
         name: '阪木',
-        imageUrl: '/img/GeneticApex/223.jpg',
+        imageUrl: '/img/GeneticApex/223.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3085,7 +3085,7 @@ export const cards: Card[] = [
     {
         id: 224,
         name: '小剛',
-        imageUrl: '/img/GeneticApex/224.jpg',
+        imageUrl: '/img/GeneticApex/224.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3094,7 +3094,7 @@ export const cards: Card[] = [
     {
         id: 225,
         name: '娜姿',
-        imageUrl: '/img/GeneticApex/225.jpg',
+        imageUrl: '/img/GeneticApex/225.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3103,7 +3103,7 @@ export const cards: Card[] = [
     {
         id: 226,
         name: '馬志士',
-        imageUrl: '/img/GeneticApex/226.jpg',
+        imageUrl: '/img/GeneticApex/226.webp',
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -3112,7 +3112,7 @@ export const cards: Card[] = [
     {
         id: 227,
         name: '妙蛙種子',
-        imageUrl: '/img/GeneticApex/227.jpg',
+        imageUrl: '/img/GeneticApex/227.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3124,7 +3124,7 @@ export const cards: Card[] = [
     {
         id: 228,
         name: '臭臭花',
-        imageUrl: '/img/GeneticApex/228.jpg',
+        imageUrl: '/img/GeneticApex/228.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3136,7 +3136,7 @@ export const cards: Card[] = [
     {
         id: 229,
         name: '凱羅斯',
-        imageUrl: '/img/GeneticApex/229.jpg',
+        imageUrl: '/img/GeneticApex/229.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3153,7 +3153,7 @@ export const cards: Card[] = [
     {
         id: 230,
         name: '小火龍',
-        imageUrl: '/img/GeneticApex/230.jpg',
+        imageUrl: '/img/GeneticApex/230.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3170,7 +3170,7 @@ export const cards: Card[] = [
     {
         id: 231,
         name: '烈焰馬',
-        imageUrl: '/img/GeneticApex/231.jpg',
+        imageUrl: '/img/GeneticApex/231.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3182,7 +3182,7 @@ export const cards: Card[] = [
     {
         id: 232,
         name: '傑尼龜',
-        imageUrl: '/img/GeneticApex/232.jpg',
+        imageUrl: '/img/GeneticApex/232.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3194,7 +3194,7 @@ export const cards: Card[] = [
     {
         id: 233,
         name: '暴鯉龍',
-        imageUrl: '/img/GeneticApex/233.jpg',
+        imageUrl: '/img/GeneticApex/233.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3211,7 +3211,7 @@ export const cards: Card[] = [
     {
         id: 234,
         name: '拉普拉斯',
-        imageUrl: '/img/GeneticApex/234.jpg',
+        imageUrl: '/img/GeneticApex/234.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3228,7 +3228,7 @@ export const cards: Card[] = [
     {
         id: 235,
         name: '頑皮雷彈',
-        imageUrl: '/img/GeneticApex/235.jpg',
+        imageUrl: '/img/GeneticApex/235.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3240,7 +3240,7 @@ export const cards: Card[] = [
     {
         id: 236,
         name: '胡地',
-        imageUrl: '/img/GeneticApex/236.jpg',
+        imageUrl: '/img/GeneticApex/236.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3257,7 +3257,7 @@ export const cards: Card[] = [
     {
         id: 237,
         name: '呆呆獸',
-        imageUrl: '/img/GeneticApex/237.jpg',
+        imageUrl: '/img/GeneticApex/237.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3269,7 +3269,7 @@ export const cards: Card[] = [
     {
         id: 238,
         name: '地鼠',
-        imageUrl: '/img/GeneticApex/238.jpg',
+        imageUrl: '/img/GeneticApex/238.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3281,7 +3281,7 @@ export const cards: Card[] = [
     {
         id: 239,
         name: '卡拉卡拉',
-        imageUrl: '/img/GeneticApex/239.jpg',
+        imageUrl: '/img/GeneticApex/239.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3297,7 +3297,7 @@ export const cards: Card[] = [
     {
         id: 240,
         name: '尼多后',
-        imageUrl: '/img/GeneticApex/240.jpg',
+        imageUrl: '/img/GeneticApex/240.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3314,7 +3314,7 @@ export const cards: Card[] = [
     {
         id: 241,
         name: '尼多王',
-        imageUrl: '/img/GeneticApex/241.jpg',
+        imageUrl: '/img/GeneticApex/241.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3326,7 +3326,7 @@ export const cards: Card[] = [
     {
         id: 242,
         name: '大嘴蝠',
-        imageUrl: '/img/GeneticApex/242.jpg',
+        imageUrl: '/img/GeneticApex/242.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3338,7 +3338,7 @@ export const cards: Card[] = [
     {
         id: 243,
         name: '雙彈瓦斯',
-        imageUrl: '/img/GeneticApex/243.jpg',
+        imageUrl: '/img/GeneticApex/243.webp',
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3354,7 +3354,7 @@ export const cards: Card[] = [
     {
         id: 244,
         name: '快龍',
-        imageUrl: '/img/GeneticApex/244.jpg',
+        imageUrl: '/img/GeneticApex/244.webp',
         type: '/img/type/dragon.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3369,7 +3369,7 @@ export const cards: Card[] = [
     {
         id: 245,
         name: '大比鳥',
-        imageUrl: '/img/GeneticApex/245.jpg',
+        imageUrl: '/img/GeneticApex/245.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3385,7 +3385,7 @@ export const cards: Card[] = [
     {
         id: 246,
         name: '喵喵',
-        imageUrl: '/img/GeneticApex/246.jpg',
+        imageUrl: '/img/GeneticApex/246.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3397,7 +3397,7 @@ export const cards: Card[] = [
     {
         id: 247,
         name: '百變怪',
-        imageUrl: '/img/GeneticApex/247.jpg',
+        imageUrl: '/img/GeneticApex/247.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3414,7 +3414,7 @@ export const cards: Card[] = [
     {
         id: 248,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/248.jpg',
+        imageUrl: '/img/GeneticApex/248.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3426,7 +3426,7 @@ export const cards: Card[] = [
     {
         id: 249,
         name: '多邊獸',
-        imageUrl: '/img/GeneticApex/249.jpg',
+        imageUrl: '/img/GeneticApex/249.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3439,7 +3439,7 @@ export const cards: Card[] = [
     {
         id: 250,
         name: '卡比獸',
-        imageUrl: '/img/GeneticApex/250.jpg',
+        imageUrl: '/img/GeneticApex/250.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
@@ -3451,7 +3451,7 @@ export const cards: Card[] = [
     {
         id: 251,
         name: '妙蛙花EX',
-        imageUrl: '/img/GeneticApex/251.jpg',
+        imageUrl: '/img/GeneticApex/251.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3469,7 +3469,7 @@ export const cards: Card[] = [
     {
         id: 252,
         name: '椰蛋樹EX',
-        imageUrl: '/img/GeneticApex/252.jpg',
+        imageUrl: '/img/GeneticApex/252.webp',
         type: '/img/type/grass.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3486,7 +3486,7 @@ export const cards: Card[] = [
     {
         id: 253,
         name: '噴火龍EX',
-        imageUrl: '/img/GeneticApex/253.jpg',
+        imageUrl: '/img/GeneticApex/253.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3504,7 +3504,7 @@ export const cards: Card[] = [
     {
         id: 254,
         name: '風速狗EX',
-        imageUrl: '/img/GeneticApex/254.jpg',
+        imageUrl: '/img/GeneticApex/254.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3521,7 +3521,7 @@ export const cards: Card[] = [
     {
         id: 255,
         name: '火焰鳥EX',
-        imageUrl: '/img/GeneticApex/255.jpg',
+        imageUrl: '/img/GeneticApex/255.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3538,7 +3538,7 @@ export const cards: Card[] = [
     {
         id: 256,
         name: '水箭龜EX',
-        imageUrl: '/img/GeneticApex/256.jpg',
+        imageUrl: '/img/GeneticApex/256.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3556,7 +3556,7 @@ export const cards: Card[] = [
     {
         id: 257,
         name: '寶石海星EX',
-        imageUrl: '/img/GeneticApex/257.jpg',
+        imageUrl: '/img/GeneticApex/257.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3568,7 +3568,7 @@ export const cards: Card[] = [
     {
         id: 258,
         name: '急凍鳥EX',
-        imageUrl: '/img/GeneticApex/258.jpg',
+        imageUrl: '/img/GeneticApex/258.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3586,7 +3586,7 @@ export const cards: Card[] = [
     {
         id: 259,
         name: '皮卡丘EX',
-        imageUrl: '/img/GeneticApex/259.jpg',
+        imageUrl: '/img/GeneticApex/259.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3603,7 +3603,7 @@ export const cards: Card[] = [
     {
         id: 260,
         name: '閃電鳥EX',
-        imageUrl: '/img/GeneticApex/260.jpg',
+        imageUrl: '/img/GeneticApex/260.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3621,7 +3621,7 @@ export const cards: Card[] = [
     {
         id: 261,
         name: '耿鬼EX',
-        imageUrl: '/img/GeneticApex/261.jpg',
+        imageUrl: '/img/GeneticApex/261.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3634,7 +3634,7 @@ export const cards: Card[] = [
     {
         id: 262,
         name: '超夢EX',
-        imageUrl: '/img/GeneticApex/262.jpg',
+        imageUrl: '/img/GeneticApex/262.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3652,7 +3652,7 @@ export const cards: Card[] = [
     {
         id: 263,
         name: '怪力EX',
-        imageUrl: '/img/GeneticApex/263.jpg',
+        imageUrl: '/img/GeneticApex/263.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3664,7 +3664,7 @@ export const cards: Card[] = [
     {
         id: 264,
         name: '嘎啦嘎啦EX',
-        imageUrl: '/img/GeneticApex/264.jpg',
+        imageUrl: '/img/GeneticApex/264.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3681,7 +3681,7 @@ export const cards: Card[] = [
     {
         id: 265,
         name: '胖可丁EX',
-        imageUrl: '/img/GeneticApex/265.jpg',
+        imageUrl: '/img/GeneticApex/265.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3698,7 +3698,7 @@ export const cards: Card[] = [
     {
         id: 266,
         name: '莉佳',
-        imageUrl: '/img/GeneticApex/266.jpg',
+        imageUrl: '/img/GeneticApex/266.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3707,7 +3707,7 @@ export const cards: Card[] = [
     {
         id: 267,
         name: '小霞',
-        imageUrl: '/img/GeneticApex/267.jpg',
+        imageUrl: '/img/GeneticApex/267.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3716,7 +3716,7 @@ export const cards: Card[] = [
     {
         id: 268,
         name: '夏伯',
-        imageUrl: '/img/GeneticApex/268.jpg',
+        imageUrl: '/img/GeneticApex/268.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3725,7 +3725,7 @@ export const cards: Card[] = [
     {
         id: 269,
         name: '阿桔',
-        imageUrl: '/img/GeneticApex/269.jpg',
+        imageUrl: '/img/GeneticApex/269.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3734,7 +3734,7 @@ export const cards: Card[] = [
     {
         id: 270,
         name: '阪木',
-        imageUrl: '/img/GeneticApex/270.jpg',
+        imageUrl: '/img/GeneticApex/270.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3743,7 +3743,7 @@ export const cards: Card[] = [
     {
         id: 271,
         name: '小剛',
-        imageUrl: '/img/GeneticApex/271.jpg',
+        imageUrl: '/img/GeneticApex/271.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3752,7 +3752,7 @@ export const cards: Card[] = [
     {
         id: 272,
         name: '娜姿',
-        imageUrl: '/img/GeneticApex/272.jpg',
+        imageUrl: '/img/GeneticApex/272.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3761,7 +3761,7 @@ export const cards: Card[] = [
     {
         id: 273,
         name: '馬志士',
-        imageUrl: '/img/GeneticApex/273.jpg',
+        imageUrl: '/img/GeneticApex/273.webp',
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3770,7 +3770,7 @@ export const cards: Card[] = [
     {
         id: 274,
         name: '火焰鳥EX',
-        imageUrl: '/img/GeneticApex/274.jpg',
+        imageUrl: '/img/GeneticApex/274.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3787,7 +3787,7 @@ export const cards: Card[] = [
     {
         id: 275,
         name: '急凍鳥EX',
-        imageUrl: '/img/GeneticApex/275.jpg',
+        imageUrl: '/img/GeneticApex/275.webp',
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3805,7 +3805,7 @@ export const cards: Card[] = [
     {
         id: 276,
         name: '閃電鳥EX',
-        imageUrl: '/img/GeneticApex/276.jpg',
+        imageUrl: '/img/GeneticApex/276.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3823,7 +3823,7 @@ export const cards: Card[] = [
     {
         id: 277,
         name: '耿鬼EX',
-        imageUrl: '/img/GeneticApex/277.jpg',
+        imageUrl: '/img/GeneticApex/277.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3836,7 +3836,7 @@ export const cards: Card[] = [
     {
         id: 278,
         name: '怪力EX',
-        imageUrl: '/img/GeneticApex/278.jpg',
+        imageUrl: '/img/GeneticApex/278.webp',
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3848,7 +3848,7 @@ export const cards: Card[] = [
     {
         id: 279,
         name: '胖可丁EX',
-        imageUrl: '/img/GeneticApex/279.jpg',
+        imageUrl: '/img/GeneticApex/279.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star2.png',
         packs: '',
@@ -3865,7 +3865,7 @@ export const cards: Card[] = [
     {
         id: 280,
         name: '噴火龍EX',
-        imageUrl: '/img/GeneticApex/280.jpg',
+        imageUrl: '/img/GeneticApex/280.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/star3.png',
         packs: '',
@@ -3883,7 +3883,7 @@ export const cards: Card[] = [
     {
         id: 281,
         name: '皮卡丘EX',
-        imageUrl: '/img/GeneticApex/281.jpg',
+        imageUrl: '/img/GeneticApex/281.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/star3.png',
         packs: '',
@@ -3900,7 +3900,7 @@ export const cards: Card[] = [
     {
         id: 282,
         name: '超夢EX',
-        imageUrl: '/img/GeneticApex/282.jpg',
+        imageUrl: '/img/GeneticApex/282.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star3.png',
         packs: '',
@@ -3918,7 +3918,7 @@ export const cards: Card[] = [
     {
         id: 283,
         name: '夢幻',
-        imageUrl: '/img/GeneticApex/283.jpg',
+        imageUrl: '/img/GeneticApex/283.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star3.png',
         packs: '',
@@ -3930,7 +3930,7 @@ export const cards: Card[] = [
     {
         id: 284,
         name: '噴火龍EX',
-        imageUrl: '/img/GeneticApex/284.jpg',
+        imageUrl: '/img/GeneticApex/284.webp',
         type: '/img/type/fire.png',
         rarity: '/img/grade/crown.png',
         packs: '',
@@ -3948,7 +3948,7 @@ export const cards: Card[] = [
     {
         id: 285,
         name: '皮卡丘EX',
-        imageUrl: '/img/GeneticApex/285.jpg',
+        imageUrl: '/img/GeneticApex/285.webp',
         type: '/img/type/electric.png',
         rarity: '/img/grade/crown.png',
         packs: '',
@@ -3965,7 +3965,7 @@ export const cards: Card[] = [
     {
         id: 286,
         name: '超夢EX',
-        imageUrl: '/img/GeneticApex/286.jpg',
+        imageUrl: '/img/GeneticApex/286.webp',
         type: '/img/type/psychic.png',
         rarity: '/img/grade/crown.png',
         packs: '',
@@ -3983,7 +3983,7 @@ export const cards: Card[] = [
     {
         id: 90001,
         name: '傷藥',
-        imageUrl: '/img/PROMO-A/1.jpg',
+        imageUrl: '/img/PROMO-A/1.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -3992,7 +3992,7 @@ export const cards: Card[] = [
     {
         id: 90002,
         name: '速度強化',
-        imageUrl: '/img/PROMO-A/2.jpg',
+        imageUrl: '/img/PROMO-A/2.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4001,7 +4001,7 @@ export const cards: Card[] = [
     {
         id: 90003,
         name: '窺手鏡',
-        imageUrl: '/img/PROMO-A/3.jpg',
+        imageUrl: '/img/PROMO-A/3.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4010,7 +4010,7 @@ export const cards: Card[] = [
     {
         id: 90004,
         name: '寶可夢圖鑑',
-        imageUrl: '/img/PROMO-A/4.jpg',
+        imageUrl: '/img/PROMO-A/4.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4019,7 +4019,7 @@ export const cards: Card[] = [
     {
         id: 90005,
         name: '精靈球',
-        imageUrl: '/img/PROMO-A/5.jpg',
+        imageUrl: '/img/PROMO-A/5.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4028,7 +4028,7 @@ export const cards: Card[] = [
     {
         id: 90006,
         name: '紅牌',
-        imageUrl: '/img/PROMO-A/6.jpg',
+        imageUrl: '/img/PROMO-A/6.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4037,7 +4037,7 @@ export const cards: Card[] = [
     {
         id: 90007,
         name: '大木博士',
-        imageUrl: '/img/PROMO-A/7.jpg',
+        imageUrl: '/img/PROMO-A/7.webp',
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
@@ -4046,7 +4046,7 @@ export const cards: Card[] = [
     {
         id: 90009,
         name: '皮卡丘',
-        imageUrl: '/img/PROMO-A/9.jpg',
+        imageUrl: '/img/PROMO-A/9.webp',
         type: '/img/type/electric.png',
         hp: 60,
         rarity: '/img/grade/promo-a.png',
