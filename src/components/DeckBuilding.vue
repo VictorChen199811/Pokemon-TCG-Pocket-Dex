@@ -78,7 +78,7 @@
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { cards } from '@/data/cards'
 import type { Card } from '@/data/cards'
-import { toJpeg } from 'html-to-image'  // 保留這個���入
+import { toJpeg } from 'html-to-image'
 
 export default defineComponent({
     name: 'DeckBuilding',
@@ -153,7 +153,7 @@ export default defineComponent({
             if (deckContainer.value) {
                 showNameInputBox.value = false
                 try {
-                    // 等待所有圖片加載完成
+                    // 等待所有图片加载完成
                     await Promise.all(Array.from(deckContainer.value.querySelectorAll('img')).map(img => {
                         if (img.complete) return Promise.resolve();
                         return new Promise(resolve => {
@@ -172,51 +172,60 @@ export default defineComponent({
                         }
                     });
 
-                    // 創建一個新的 Image 對象來加載生成的圖片
+                    // 创建一个新的 Image 对象来加载生成的图片
                     const img = new Image();
                     img.onload = () => {
                         const canvas = document.createElement('canvas');
                         const ctx = canvas.getContext('2d');
                         if (ctx) {
-                            const borderWidth = 10;  // 邊框寬度
+                            const borderWidth = 10;  // 边框宽度
                             canvas.width = img.width + borderWidth * 2;
                             canvas.height = img.height + borderWidth * 2;
 
-                            // 繪製白色邊框
+                            // 绘制白色边框
                             ctx.fillStyle = 'white';
                             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                            // 在邊框內繪製原始圖像
+                            // 在边框内绘制原始图像
                             ctx.drawImage(img, borderWidth, borderWidth);
 
                             // 添加水印文字
                             ctx.font = 'bold 24px Arial';
-                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';  // 使用半透明黑色
+                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
                             const text = 'pokemon-tcg-pocket-dex.com';
                             const textWidth = ctx.measureText(text).width;
                             ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20);
 
-                            // 再次繪製文字，但稍微偏移，創建陰影效果
+                            // 再次绘制文字，但稍微偏移，创建阴影效果
                             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
                             ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22);
 
-                            // 使用 Blob 和 URL.createObjectURL 來創建下載鏈接
+                            // 使用 Blob 和 URL.createObjectURL 来创建下载链接
                             canvas.toBlob(blob => {
                                 if (blob) {
                                     const url = URL.createObjectURL(blob);
                                     const link = document.createElement('a');
                                     link.download = `${deckName.value || 'deck'}.jpg`;
                                     link.href = url;
-                                    link.click();
-                                    URL.revokeObjectURL(url);
+                                    
+                                    // 对于 Safari，我们使用 window.open 来打开图片
+                                    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                                        window.open(url, '_blank');
+                                    } else {
+                                        link.click();
+                                    }
+                                    
+                                    setTimeout(() => {
+                                        URL.revokeObjectURL(url);
+                                    }, 100);
                                 }
                             }, 'image/jpeg', 0.95);
                         }
                     };
                     img.src = dataUrl;
                 } catch (error) {
-                    console.error('導出失敗:', error);
-                    alert('導出失敗，請稍後再試。');
+                    console.error('导出失败:', error);
+                    alert('导出失败，请稍后再试。');
                 }
             }
         };
