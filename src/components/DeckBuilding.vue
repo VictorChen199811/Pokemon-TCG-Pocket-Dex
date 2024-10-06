@@ -78,8 +78,7 @@
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { cards } from '@/data/cards'
 import type { Card } from '@/data/cards'
-import html2canvas from 'html2canvas'
-import { toJpeg } from 'html-to-image'  // 導入 html-to-image
+import { toJpeg } from 'html-to-image'  // 保留這個導入
 
 export default defineComponent({
     name: 'DeckBuilding',
@@ -150,45 +149,56 @@ export default defineComponent({
             showNameInputBox.value = false
         }
 
-        const exportAsJPG = () => {
+        const exportAsJPG = async () => {
             if (deckContainer.value) {
                 showNameInputBox.value = false
-                html2canvas(deckContainer.value, {
-                    backgroundColor: null,
-                    scale: 2
-                }).then(canvas => {
-                    // 創建一個新的 canvas 來繪製邊框和水印
-                    const borderedCanvas = document.createElement('canvas')
-                    const borderedCtx = borderedCanvas.getContext('2d')
-                    if (borderedCtx) {
-                        const borderWidth = 10  // 邊框寬度
-                        borderedCanvas.width = canvas.width + borderWidth * 2
-                        borderedCanvas.height = canvas.height + borderWidth * 2
+                try {
+                    const dataUrl = await toJpeg(deckContainer.value, {
+                        quality: 0.95,
+                        backgroundColor: 'white',
+                        width: deckContainer.value.offsetWidth,
+                        height: deckContainer.value.offsetHeight,
+                    })
 
-                        // 繪製白色邊框
-                        borderedCtx.fillStyle = 'white'
-                        borderedCtx.fillRect(0, 0, borderedCanvas.width, borderedCanvas.height)
+                    // 創建一個新的 Image 對象來加載生成的圖片
+                    const img = new Image()
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas')
+                        const ctx = canvas.getContext('2d')
+                        if (ctx) {
+                            const borderWidth = 10  // 邊框寬度
+                            canvas.width = img.width + borderWidth * 2
+                            canvas.height = img.height + borderWidth * 2
 
-                        // 在邊框內繪製原始圖像
-                        borderedCtx.drawImage(canvas, borderWidth, borderWidth)
+                            // 繪製白色邊框
+                            ctx.fillStyle = 'white'
+                            ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-                        // 添加水印文字
-                        borderedCtx.font = 'bold 24px Arial'
-                        borderedCtx.fillStyle = 'rgba(0, 0, 0, 0.5)'  // 使用半透明黑色
-                        const text = 'pokemon-tcg-pocket-dex.com'
-                        const textWidth = borderedCtx.measureText(text).width
-                        borderedCtx.fillText(text, borderedCanvas.width - textWidth - 20, borderedCanvas.height - 20)
+                            // 在邊框內繪製原始圖像
+                            ctx.drawImage(img, borderWidth, borderWidth)
 
-                        // 再次繪製文字，但稍微偏移，創建陰影效果
-                        borderedCtx.fillStyle = 'rgba(255, 255, 255, 0.8)'
-                        borderedCtx.fillText(text, borderedCanvas.width - textWidth - 22, borderedCanvas.height - 22)
+                            // 添加水印文字
+                            ctx.font = 'bold 24px Arial'
+                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'  // 使用半透明黑色
+                            const text = 'pokemon-tcg-pocket-dex.com'
+                            const textWidth = ctx.measureText(text).width
+                            ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20)
 
-                        const link = document.createElement('a')
-                        link.download = `${deckName.value || 'deck'}.jpg`
-                        link.href = borderedCanvas.toDataURL('image/jpeg', 0.9)  // 使用較高的質量設置
-                        link.click()
+                            // 再次繪製文字，但稍微偏移，創建陰影效果
+                            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
+                            ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22)
+
+                            const link = document.createElement('a')
+                            link.download = `${deckName.value || 'deck'}.jpg`
+                            link.href = canvas.toDataURL('image/jpeg', 0.9)  // 使用較高的質量設置
+                            link.click()
+                        }
                     }
-                })
+                    img.src = dataUrl
+                } catch (error) {
+                    console.error('導出失敗:', error)
+                    alert('導出失敗，請稍後再試。')
+                }
             }
         }
 

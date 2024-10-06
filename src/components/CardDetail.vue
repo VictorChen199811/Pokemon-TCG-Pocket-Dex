@@ -13,6 +13,14 @@
           <img :src="card.rarity" :alt="'稀有度'" class="rarity-image">
         </div>
         <hr>
+        <div v-if="card.ability" class="ability">
+          <h3>
+            <img src="/img/description/ability.png" alt="Ability" class="ability-icon">
+            {{ card.ability.name }}
+          </h3>
+          <p v-html="formatAbilityText(card.ability.defect)"></p>
+        </div>
+        <hr v-if="card.ability">
         <div class="moves">
           <div class="move" v-if="card.move_1">
             <div class="move-energy">
@@ -24,7 +32,7 @@
               <span class="move-damage">{{ card.move_1.damage }}</span>
             </div>
           </div>
-          <p v-if="card.move_1?.move_defect" class="move-defect">{{ card.move_1.move_defect }}</p>
+          <p v-if="card.move_1?.move_defect" class="move-defect" v-html="formatAbilityText(card.move_1.move_defect)"></p>
         </div>
         <hr v-if="card.move_2">
         <div class="moves" v-if="card.move_2">
@@ -38,7 +46,7 @@
               <span class="move-damage">{{ card.move_2.damage }}</span>
             </div>
           </div>
-          <p v-if="card.move_2?.move_defect" class="move-defect">{{ card.move_2.move_defect }}</p>
+          <p v-if="card.move_2?.move_defect" class="move-defect" v-html="formatAbilityText(card.move_2.move_defect)"></p>
         </div>
         <hr>
         <div class="card-footer">
@@ -64,7 +72,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue'
+import { defineComponent, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { cards } from '../data/cards'
 
@@ -85,7 +93,23 @@ export default defineComponent({
       router.push('/cards')
     }
 
-    return { card, totalCards, goBack }
+    const formatAbilityText = (text: string) => {
+      // 這裡定義需要加粗的關鍵詞
+      const boldWords = ['睡眠', 'HP', '中毒', '麻痺', '燒傷', '混亂'];
+      
+      // 使用正則表達式替換關鍵詞為加粗版本
+      return boldWords.reduce((acc, word) => {
+        const regex = new RegExp(`\\b${word}\\b`, 'g');
+        return acc.replace(regex, `<b>${word}</b>`);
+      }, text);
+    };
+
+    onMounted(() => {
+      // 在組件掛載時滾動到頁面頂部
+      window.scrollTo(0, 0)
+    })
+
+    return { card, totalCards, goBack, formatAbilityText }
   }
 })
 </script>
@@ -174,6 +198,10 @@ export default defineComponent({
   margin-bottom: 0.5rem;
 }
 
+.move-defect :deep(b) {
+  font-weight: bold;
+}
+
 .card-footer {
   display: flex;
   justify-content: space-between;
@@ -230,4 +258,37 @@ hr {
     width: 100%;
   }
 }
+
+/* 新增 ability 相關樣式 */
+.ability {
+  margin-bottom: 1rem;
+}
+
+.ability h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: red;
+  font-weight: bold;  /* 添加這行來使文字變粗 */
+}
+
+.ability-icon {
+  width: 100px;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.ability p {
+  font-style: italic;
+  font-size: 0.9em;
+  color: inherit;  /* 使用父元素的文字顏色 */
+  text-decoration: none;  /* 移除下劃線 */
+}
+
+.ability p :deep(b), .move-defect :deep(b) {
+  font-weight: bold;
+}
+
+/* ... 其他樣式保持不變 ... */
 </style>

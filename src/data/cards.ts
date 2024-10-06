@@ -28,7 +28,6 @@ interface MoveData {
 interface Ability {
     name: string,
     defect: string,
-
 }
 
 export const cards: Card[] = [
@@ -64,7 +63,12 @@ export const cards: Card[] = [
         rarity: '/img/grade/diamond3.png',
         packs: '',
         hp: 160,
-        move_1: {move_name: '超級吸取', damage: 80, move_defect: '將這隻寶可夢恢復30HP', move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        move_1: {
+            move_name: '超級吸取',
+            damage: 80,
+            move_defect: '將這隻寶可夢恢復30HP。',
+            move_energy: ['grass', 'grass', 'colorless', 'colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -77,7 +81,12 @@ export const cards: Card[] = [
         packs: '',
         hp: 190,
         move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_defect: '將這隻寶可夢恢復30HP', move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '巨型綻放',
+            damage: 100,
+            move_defect: '將這隻寶可夢恢復30HP。',
+            move_energy: ['grass', 'grass', 'colorless', 'colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -89,7 +98,11 @@ export const cards: Card[] = [
         rarity: '/img/grade/diamond1.png',
         packs: '',
         hp: 50,
-        move_1: {move_name: '尋找朋友',move_defect:'從自己的牌庫隨機將一張草系寶可夢加入手牌', move_energy: ['colorless']},
+        move_1: {
+            move_name: '尋找朋友',
+            move_defect: '從自己的牌庫隨機將一張草系寶可夢加入手牌。',
+            move_energy: ['colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 1
     },
@@ -103,7 +116,7 @@ export const cards: Card[] = [
         hp: 80,
         move_1: {move_name: '蟲咬', damage: 30, move_energy: ['colorless', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 7,
@@ -113,11 +126,10 @@ export const cards: Card[] = [
         rarity: '/img/grade/diamond3.png',
         packs: '',
         hp: 120,
-        ability: {name:'粉療', defect:'在自己的回合時，可以使用1次。將自己的所有寶可夢恢復20HP'},
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        ability: {name: '粉療', defect: '在自己的回合時，可以使用1次。將自己的所有寶可夢恢復20HP。'},
+        move_1: {move_name: '起風', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 8,
@@ -126,11 +138,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 50,
+        move_1: {move_name: '刺刺痛痛', damage: 20, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 9,
@@ -139,11 +150,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {move_name: '蟲咬', damage: 30, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 10,
@@ -152,11 +162,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 120,
+        move_1: {move_name: '銳利刺針', damage: 70, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 11,
@@ -165,11 +174,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 60,
+        move_1: {move_name: '衝撞', damage: 20, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 12,
@@ -178,11 +186,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {move_name: '口水', damage: 60, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 13,
@@ -191,9 +198,13 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 140,
+        move_1: {
+            move_name: '芳香催眠',
+            damage: 80,
+            move_defect: '將對手的戰鬥寶可夢<b>睡眠</b>。',
+            move_energy: ['grass', 'grass', 'colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -204,11 +215,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 70,
+        move_1: {move_name: '抓', damage: 30, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 15,
@@ -217,11 +227,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 120,
+        move_1: {move_name: '劈開', damage: 80, move_energy: ['grass', 'grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 16,
@@ -230,11 +239,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 17,
@@ -243,11 +251,15 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {
+            move_name: '毒粉',
+            damage: 30,
+            move_defect: '將對手的戰鬥寶可夢<b>中毒</b>。',
+            move_energy: ['grass', 'colorless', 'colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 18,
@@ -256,11 +268,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 60,
+        move_1: {move_name: '藤鞭', damage: 20, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 19,
@@ -269,11 +280,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 90,
+        move_1: {move_name: '飛葉快刀', damage: 40, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 20,
@@ -282,11 +292,14 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 140,
+        ability: {
+            name: '芳香陷阱',
+            defect: '若這隻寶可夢在戰鬥場上，則在自己的回合時可使用1次。選擇對手的備戰區的1隻<b>基礎</b>寶可夢，與戰鬥寶可夢交換。'
+        },
+        move_1: {move_name: '藤鞭', damage: 60, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 21,
@@ -295,11 +308,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 50,
+        move_1: {move_name: '種子炸彈', damage: 60, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 22,
@@ -308,9 +320,13 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 130,
+        move_1: {
+            move_name: '踩踏',
+            damage: 30,
+            move_defect: '擲1次硬幣若為正面，則增加30點傷害。',
+            move_energy: ['grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -321,9 +337,13 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 160,
+        move_1: {
+            move_name: '熱帶揮擊',
+            damage: 40,
+            move_defect: '擲1次硬幣若為正面，則增加40點傷害。',
+            move_energy: ['grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -334,11 +354,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {move_name: '吸取', damage: 40, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 25,
@@ -347,11 +366,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 70,
+        move_1: {move_name: '尖銳鐮', damage: 30, move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 26,
@@ -360,11 +378,15 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 90,
+        move_1: {
+            move_name: '雙重角擊',
+            damage: 50,
+            move_defect: '擲2次硬幣，造成正面出現次數 × 50點傷害。',
+            move_energy: ['grass', 'grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 27,
@@ -373,11 +395,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 50,
+        move_1: {move_name: '附著', damage: 10, move_energy: ['colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 28,
@@ -386,11 +407,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {move_name: '滾動衝撞', damage: 40, move_energy: ['colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 29,
@@ -399,11 +419,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 60,
+        move_1: {move_name: '吸取一下', damage: 10, move_defect: '將這隻寶可夢恢復10HP。', move_energy: ['grass']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 30,
@@ -412,11 +431,15 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 100,
+        move_1: {
+            move_name: '綠葉供給',
+            damage: 60,
+            move_defect: '從自己的能量去抽出一個草能量，附於備戰區的草系寶可夢身上。',
+            move_energy: ['grass', 'grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 31,
@@ -425,11 +448,15 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 70,
+        move_1: {
+            move_name: '偷襲',
+            damage: 60,
+            move_defect: '擲1次硬幣若為反面，則這個招式失敗。',
+            move_energy: ['colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 32,
@@ -438,11 +465,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 120,
+        move_1: {move_name: '飛葉快刀', damage: 70, move_energy: ['grass', 'colorless', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
 
     {
@@ -452,11 +478,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '火花',
+            move_defect: '將這隻寶可夢身上的一個火能量丟棄。',
+            damage: 30,
+            move_energy: ['fire']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 34,
@@ -465,11 +495,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '火之爪', damage: 90, move_energy: ['fire', 'colorless', 'colorless']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 35,
@@ -478,11 +507,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {
+            move_name: '火焰漩渦',
+            damage: 60,
+            move_defect: '將這隻寶可夢身上的2個火能量丟棄。',
+            move_energy: ['fire', 'fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 36,
@@ -491,11 +524,16 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 180,
+        move_1: {move_name: '劈開', damage: 60, move_energy: ['fire', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '紅蓮風暴',
+            damage: 200,
+            move_defect: '將這隻寶可夢身上的兩個火能量丟棄。',
+            move_energy: ['fire', 'fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 37,
@@ -504,11 +542,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {
+            move_name: '搖尾巴',
+            damage: 60,
+            move_defect: '擲1次硬幣若為正面，則在下一個對手的回合，收到這個招式的寶可夢無法使用招式。',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 38,
@@ -517,11 +559,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '噴射火焰',
+            damage: 90,
+            move_defect: '將這隻寶可夢身上的1個火能量丟棄。',
+            move_energy: ['fire', 'fire']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 39,
@@ -530,11 +576,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '咬住', damage: 60, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 40,
@@ -543,11 +588,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {
+            move_name: '熱力衝撞',
+            damage: 100,
+            move_defect: '這隻寶可夢也收到20點傷害。',
+            move_energy: ['fire', 'fire', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 41,
@@ -556,11 +605,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {
+            move_name: '猛火衝刺',
+            damage: 120,
+            move_defect: '這隻寶可夢也收到20點傷害。',
+            move_energy: ['fire', 'fire', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 42,
@@ -569,11 +622,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '火焰', damage: 20, move_energy: ['fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 43,
@@ -582,11 +634,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '火之鬃', damage: 40, move_energy: ['fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 44,
@@ -595,11 +646,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '熔岩拳', damage: 60, move_energy: ['fire', 'fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 45,
@@ -608,11 +658,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '噴射火焰',
+            damage: 110,
+            move_defect: '將這隻寶可夢身上的1個火能量丟棄。',
+            move_energy: ['fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 46,
@@ -621,11 +675,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '神鳥猛擊',
+            damage: 130,
+            move_defect: '擲1次硬幣若為反面，則這個招式失敗。',
+            move_energy: ['fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 47,
@@ -634,11 +692,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '烈火之舞',
+            move_defect: '擲3次硬幣，從自己的能量去抽出與正面出現的次數相同數量的火能量，以任意方式附於備戰區的火系寶可夢身上。',
+            move_energy: ['fire']
+        },
+        move_2: {move_name: '高溫爆破', damage: 70, move_energy: ['fire', 'colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 48,
@@ -647,11 +709,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '烈焰', damage: 30, move_energy: ['fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 49,
@@ -660,11 +721,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '抓', damage: 20, move_energy: ['fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 50,
@@ -673,11 +733,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '火之爪', damage: 60, move_energy: ['fire', 'colorless']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 51,
@@ -686,11 +745,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '咬', damage: 60, move_energy: ['colorless']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 52,
@@ -699,13 +757,11 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 130,
+        move_1: {move_name: '大字爆炎', damage: 130, move_energy: ['fire', 'colorless', 'colorless', 'colorless']},
+        weakness: {type: 'water', multiplier: 20},
         retreat_cost: 3
     },
-
     {
         id: 53,
         name: '傑尼龜',
@@ -713,11 +769,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '水槍', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 54,
@@ -726,11 +781,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '飛濺', damage: 40, move_energy: ['water', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 55,
@@ -739,10 +793,14 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 150,
+        move_1: {
+            move_name: '水砲',
+            damage: 80,
+            move_defect: '若額外附有2個水能量，增加60點傷害。',
+            move_energy: ['water', 'water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -752,10 +810,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 180,
+        move_1: {move_name: '衝浪', damage: 40, move_energy: ['water', 'colorless']},
+        move_2: {
+            move_name: '水箭炮',
+            damage: 100,
+            move_defect: '若額外附有2個水能量，則增加60點傷害',
+            move_energy: ['water', 'water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -765,11 +828,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '頭痛',
+            damage: 10,
+            move_defect: '在下個對手的回合，對手無法從手牌使出支援者卡。',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 58,
@@ -778,11 +845,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '水之刀鋒', damage: 70, move_energy: ['water', 'water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 59,
@@ -791,11 +857,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '鰭快刀', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 60,
@@ -804,11 +869,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '拳骨', damage: 40, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 61,
@@ -817,11 +881,11 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        ability: {name: '反擊', defect: '這隻寶可夢在戰鬥場受到對手的寶可夢招式的上海市，使用招式的寶可夢受到20點傷害。'},
+        move_1: {move_name: '百萬噸重拳', damage: 80, move_energy: ['water', 'colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 62,
@@ -830,11 +894,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '重摑', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 63,
@@ -843,11 +906,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 110,
+        move_1: {
+            move_name: '毒之觸手',
+            damage: 50,
+            move_defect: '將對手的戰鬥寶可夢<a>中毒</a>',
+            move_energy: ['water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 64,
@@ -856,11 +923,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '頭鎚', damage: 30, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 65,
@@ -869,10 +935,9 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 120,
+        move_1: {move_name: '衝浪', damage: 90, move_energy: ['water', 'water', 'water']},
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -882,11 +947,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '舌擊', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 67,
@@ -895,10 +959,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 120,
+        ability: {name: '硬殼盔甲', defect: '這隻寶可夢受到的招式傷害-10點。'},
+        move_1: {move_name: '衝浪', damage: 70, move_energy: ['water', 'water', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -908,11 +972,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '夾住', damage: 40, move_energy: ['water', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 69,
@@ -921,10 +984,14 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 120,
+        move_1: {
+            move_name: '必殺蟹鉗',
+            damage: 80,
+            move_defect: '擲2次硬幣，若全部為正面，則增加80點傷害。',
+            move_energy: ['water', 'water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -934,11 +1001,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '水槍', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 71,
@@ -947,11 +1013,14 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '水箭',
+            move_defect: '對手的1隻寶可夢受到50點傷害',
+            move_energy: ['water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 72,
@@ -960,11 +1029,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '活蹦亂跳', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 73,
@@ -973,11 +1041,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '角刺',
+            damage: 80,
+            move_defect: '擲1次硬幣若為反面，則這個招式失敗',
+            move_energy: ['water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 74,
@@ -986,11 +1058,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '掌擊', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 75,
@@ -999,11 +1070,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '飛濺', damage: 40, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 0
     },
     {
         id: 76,
@@ -1012,11 +1082,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {move_name: '水泡濺射', damage: 90, move_energy: ['water', 'water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 0
     },
     {
         id: 77,
@@ -1025,11 +1094,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 30,
+        move_1: {move_name: '躍起', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 78,
@@ -1038,24 +1106,32 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {
+            move_name: '破壞死光',
+            damage: 100,
+            move_defect: '將對手的戰鬥寶可夢身上的隨機1個能量丟棄。',
+            move_energy: ['water', 'water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 79,
-        name: '乘龍',
+        name: '拉普拉斯',
         imageUrl: '/img/GeneticApex/79.jpg',
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '水炮',
+            damage: 20,
+            move_defect: '若額外附有3個水能量，則增加70傷害。',
+            move_energy: ['water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 80,
@@ -1064,11 +1140,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {
+            move_name: '泡沫吸取',
+            damage: 60,
+            move_defect: '將這隻寶可夢恢復30HP',
+            move_energy: ['water', 'colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 81,
@@ -1077,11 +1157,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '水槍', damage: 40, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 82,
@@ -1090,11 +1169,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '古代潮旋',
+            damage: 70,
+            move_defect: '在下個對手的回合，受到這個招式的寶可夢無法使用招式。',
+            move_energy: ['water', 'colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 83,
@@ -1103,11 +1186,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '冰凍光束',
+            damage: 60,
+            move_defect: '擲1次硬幣若為正面，則將對手的戰鬥寶可夢<b>麻痹</b>。',
+            move_energy: ['water', 'water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 84,
@@ -1116,11 +1203,16 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {move_name: '冰之翼', damage: 40, move_energy: ['water', 'colorless']},
+        move_2: {
+            move_name: '暴風雪',
+            damage: 80,
+            move_defect: '對手的所有備戰寶可夢也受到10點傷害。',
+            move_energy: ['water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 85,
@@ -1129,11 +1221,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '羽擊', damage: 30, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 86,
@@ -1142,11 +1233,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '翅膀攻擊', damage: 70, move_energy: ['colorless', 'colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 87,
@@ -1155,11 +1245,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '活蹦亂跳', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 88,
@@ -1168,11 +1257,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '水漂', damage: 60, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 89,
@@ -1181,11 +1269,11 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        ability: {name: '飛水手裡劍', defect: '在自己的回合時，可使用1次。對手的1隻寶可夢受到20點傷害。'},
+        move_1: {move_name: '霞斬', damage: 60, move_energy: ['water', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 90,
@@ -1194,11 +1282,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '潑水', damage: 30, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 91,
@@ -1207,11 +1294,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '攻擊傷口',
+            damage: 10,
+            move_defect: '若對手的戰鬥寶可夢有受到傷害，則增加60點傷害。',
+            move_energy: ['water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 92,
@@ -1220,11 +1311,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '衝撞', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 93,
@@ -1233,13 +1323,16 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '細雪',
+            damage: 40,
+            move_defect: '將對手的戰鬥寶可夢<a>睡眠</a>。',
+            move_energy: ['grass', 'colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
-
     {
         id: 94,
         name: '皮卡丘',
@@ -1247,11 +1340,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '咬', damage: 60, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 95,
@@ -1260,11 +1352,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '十萬伏特',
+            damage: 140,
+            move_defect: '將這隻寶可夢身上的能量全部丟棄。',
+            move_energy: ['electric', 'electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 96,
@@ -1273,11 +1369,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '電氣陣',
+            damage: 30,
+            move_defect: '造成自己的備戰區雷系寶可夢數量×30點傷害。',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 97,
@@ -1286,11 +1386,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '光彈', damage: 20, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 98,
@@ -1299,11 +1398,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '迴轉攻擊', damage: 60, move_energy: ['electric', 'colorless', 'colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 99,
@@ -1312,11 +1410,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 100,
@@ -1325,11 +1422,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '電球', damage: 60, move_energy: ['electric', 'electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 0
     },
     {
         id: 101,
@@ -1338,11 +1434,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '電擊拳',
+            damage: 40,
+            move_defect: '擲1次硬幣若為正面，則增加40點傷害。若為反面，則這隻寶可夢也受到20點傷害',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 102,
@@ -1351,11 +1451,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '飛彈針',
+            damage: 40,
+            move_defect: '擲4次硬幣，造成正面出現的次數×40點傷害。',
+            move_energy: ['electric', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 103,
@@ -1364,11 +1468,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '落雷',
+            damage: 100,
+            move_defect: '自己的一隻備戰寶可夢也受到30點傷害',
+            move_energy: ['electric', 'electric', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 104,
@@ -1377,11 +1485,16 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['electric']},
+        move_2: {
+            move_name: '颶風雷電',
+            damage: 50,
+            move_defect: '擲4次硬幣，造成正面出現的次數×50點傷害。',
+            move_energy: ['grass', 'grass', 'colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 105,
@@ -1390,11 +1503,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '電氣踢', damage: 20, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 106,
@@ -1403,11 +1515,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '雷電箭', move_defect: '對手的1隻寶可夢受到30點傷害', move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 107,
@@ -1416,11 +1527,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 30,
+        move_1: {move_name: '小電氣', damage: 30, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 108,
@@ -1429,11 +1539,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '伏特頭擊', damage: 40, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 109,
@@ -1442,10 +1551,14 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 140,
+        move_1: {
+            move_name: '雷電牙',
+            damage: 60,
+            move_defect: '擲1次硬幣若為正面，則對手的戰鬥寶可夢麻痹。',
+            move_energy: ['electric', 'electric', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1455,11 +1568,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '擺尾拍擊', damage: 60, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 111,
@@ -1468,11 +1580,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '電光一閃',
+            damage: 40,
+            move_defect: '擲1次硬幣若為正面，則增加40點傷害。',
+            move_energy: ['colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 112,
@@ -1481,13 +1597,16 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '電擊',
+            damage: 30,
+            move_defect: '擲1次硬幣若為正面，則對手的戰鬥寶可夢<a>麻痹</a>。',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
-
     {
         id: 113,
         name: '皮皮',
@@ -1495,11 +1614,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '巴掌', damage: 20, move_energy: ['psychic']},
+        weakness: {type: 'metal', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 114,
@@ -1508,11 +1626,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '魔法射擊', damage: 40, move_energy: ['psychic']},
+        weakness: {type: 'metal', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 115,
@@ -1521,11 +1638,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '瞬間移動', move_energy: ['colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 116,
@@ -1534,11 +1650,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '超能力', damage: 60, move_energy: ['psychic', 'colorless', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 117,
@@ -1547,11 +1662,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {
+            move_name: '精神強念',
+            damage: 60,
+            move_defect: '增加對手的戰鬥寶可夢身上的能量的數量×30點傷害',
+            move_energy: ['psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 118,
@@ -1560,11 +1679,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '擺尾拍擊', damage: 60, move_energy: ['psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 119,
@@ -1573,10 +1691,9 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 130,
+        move_1: {move_name: '超念力', damage: 80, move_energy: ['psychic', 'psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1586,11 +1703,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '瓦斯包圍', damage: 20, move_energy: ['psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 121,
@@ -1599,11 +1715,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '鬼火', damage: 30, move_energy: ['psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 122,
@@ -1612,11 +1727,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {
+            move_name: '找麻煩',
+            damage: 50,
+            move_defect: '在下個對手的回合，對手無法從手牌使出支援者卡。',
+            move_energy: ['psychic']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 123,
@@ -1625,11 +1744,11 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 170,
+        ability: {name: '影子咒縛', defect: '只要這隻寶可夢在戰鬥場上，對手無法從手牌使出支援者卡。'},
+        move_1: {move_name: '陰森射擊', damage: 100, move_energy: ['psychic', 'psychic', 'psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 124,
@@ -1638,11 +1757,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '囈語', damage: 30, move_energy: ['psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 125,
@@ -1651,11 +1769,11 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        ability: {name: '引夢擺錘', defect: '在自己的回合時，可使用一次，擲1次硬幣若為正面，則將對手的戰鬥寶可夢睡眠。'},
+        move_1: {move_name: '精神拳', damage: 50, move_energy: ['psychic', 'colorless', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 126,
@@ -1664,11 +1782,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {
+            move_name: '屏障攻擊',
+            damage: 30,
+            move_defect: '在下個對手的回合，這隻寶可夢受到招式的傷害-20點。',
+            move_energy: ['psychic', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 127,
@@ -1677,11 +1799,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {
+            move_name: '精神強念',
+            damage: 30,
+            move_defect: '增加對手的戰鬥寶可夢身上的能量的數量×20點傷害。',
+            move_energy: ['psychic', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 128,
@@ -1690,11 +1816,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '力量爆破',
+            damage: 120,
+            move_defect: '將這隻寶可夢身上的2個超能力能量丟棄。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 129,
@@ -1703,11 +1833,16 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '念動彈', damage: 50, move_energy: ['psychic', 'colorless']},
+        move_2: {
+            move_name: '精神衝鋒',
+            damage: 100,
+            move_defect: '將這隻寶可夢身上的2個超能力能量丟棄。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 130,
@@ -1716,11 +1851,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '衝撞', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 131,
@@ -1729,11 +1863,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '掌擊', damage: 30, move_energy: ['psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 132,
@@ -1742,11 +1875,14 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 110,
+        ability: {
+            name: '移形換影',
+            defect: '在自己的回合時，可使用1次。從自己的能量區抽出超能力能量，附於戰鬥場的超能力系寶可夢身上。'
+        },
+        move_1: {move_name: '精神射擊', damage: 60, move_energy: ['psychic', 'psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 133,
@@ -1755,11 +1891,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '咬', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 134,
@@ -1768,11 +1903,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '愛心印章', damage: 60, move_energy: ['psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 135,
@@ -1781,10 +1915,9 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 90,
+        move_1: {move_name: '百萬噸重拳', damage: 50, move_energy: ['psychic', 'colorless', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1794,11 +1927,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '雙重金勾臂',
+            damage: 100,
+            move_defect: '擲2次硬幣，造成正面出現的次數×100點傷害。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 4
     },
 
     {
@@ -1808,11 +1945,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '抓', damage: 60, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 138,
@@ -1821,11 +1957,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '劈開', damage: 60, move_energy: ['fighting', 'fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 139,
@@ -1834,11 +1969,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '擲泥', damage: 20, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 140,
@@ -1847,11 +1981,15 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '挖洞',
+            damage: 60,
+            move_defect: '擲1次硬幣若為正面，則在下個對手的對手，這隻寶可夢不會受到招式的傷害與效果的影響',
+            move_energy: ['fighting']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 141,
@@ -1860,11 +1998,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '踢倒', damage: 20, move_energy: ['fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 142,
@@ -1873,11 +2010,15 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '還擊',
+            damage: 60,
+            move_defect: '若這隻寶可夢有受到傷害，則增加60點傷害。',
+            move_energy: ['fighting', 'fighting']
+        },
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 143,
@@ -1886,11 +2027,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '拳骨', damage: 20, move_energy: ['fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 144,
@@ -1899,11 +2039,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '怪力', damage: 50, move_energy: ['fighting', 'fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 145,
@@ -1912,10 +2051,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 150,
+        move_1: {move_name: '地球上投', damage: 100, move_energy: ['fighting', 'fighting', 'fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1925,10 +2063,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 180,
+        move_1: {move_name: '百萬噸重拳', damage: 120, move_energy: ['fighting', 'fighting', 'fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1938,11 +2075,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 148,
@@ -1951,10 +2087,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 100,
+        move_1: {move_name: '滾動', damage: 70, move_energy: ['fighting', 'colorless', 'colorless']},
+        weakness: {type: 'grass', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -1964,11 +2099,15 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 160,
+        move_1: {
+            move_name: '捨身衝撞',
+            damage: 60,
+            move_defect: '這隻寶可夢也受到50點傷害。',
+            move_energy: ['fighting', 'colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 150,
@@ -1977,11 +2116,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 110,
+        move_1: {move_name: '大地粉碎', damage: 70, move_energy: ['fighting', 'fighting', 'fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 151,
@@ -1990,11 +2128,14 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '叫聲',
+            move_defect: '在下個對手的回合，受到這個招式的寶可夢使用招式的傷害-20點',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 152,
@@ -2003,11 +2144,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '骨頭打擊', damage: 40, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 153,
@@ -2016,11 +2156,15 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '骨頭迴力鏢',
+            damage: 60,
+            move_defect: '擲2次硬幣，造成正面出現的次數×80點傷害。',
+            move_energy: ['fighting', 'fighting']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 154,
@@ -2029,11 +2173,14 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {
+            move_name: '伸腿踢',
+            move_defect: '對手的1隻備戰寶可夢受到30點傷害。',
+            move_energy: ['fighting']
+        },
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 155,
@@ -2042,11 +2189,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '拳', damage: 30, move_energy: ['fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 156,
@@ -2055,10 +2201,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 80,
+        move_1: {move_name: '撞擊', damage: 60, move_energy: ['fighting', 'fighting', 'colorless']},
+        weakness: {type: 'grass', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2068,11 +2213,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {move_name: '角鑽', damage: 100, move_energy: ['fighting', 'fighting', 'fighting', 'colorless']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 158,
@@ -2081,11 +2225,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '甲殼攻擊', damage: 40, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 159,
@@ -2094,11 +2237,15 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '吸血',
+            damage: 50,
+            move_defect: '將這隻寶可夢恢復對對手的戰鬥寶可夢造成的傷害相同數值的HP。',
+            move_energy: ['fighting']
+        },
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 160,
@@ -2107,11 +2254,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '拍擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 161,
@@ -2120,11 +2266,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '迴轉踢', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 162,
@@ -2133,11 +2278,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '拳骨', damage: 30, move_energy: ['fighting', 'colorless']},
+        weakness: {type: 'psychic', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 163,
@@ -2146,13 +2290,16 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 130,
+        move_1: {
+            move_name: '揍飛',
+            damage: 70,
+            move_defect: '將對手的戰鬥寶可夢與備戰寶可夢呼喚。「由對手選擇放置於戰鬥場的寶可夢。」',
+            move_energy: ['fighting', 'fighting', 'colorless']
+        },
+        weakness: {type: 'psychic', multiplier: 20},
         retreat_cost: 3
     },
-
     {
         id: 164,
         name: '阿柏蛇',
@@ -2160,11 +2307,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '咬住', damage: 20, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 165,
@@ -2173,11 +2319,15 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '窮追不捨',
+            damage: 60,
+            move_defect: '在下個對手的回合，受到這個招式的寶可夢無法<b>撤退</b>。',
+            move_energy: ['darkness', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 166,
@@ -2186,11 +2336,14 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '呼朋引伴',
+            move_defect: '從自己的牌庫隨機將1張「尼多郎」放置於備戰區。',
+            move_energy: ['darkness']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 167,
@@ -2199,11 +2352,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '咬住', damage: 30, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 168,
@@ -2212,11 +2364,15 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '甜蜜攻擊',
+            damage: 80,
+            move_defect: '增加自己的備戰區的「尼多王」的數量×50點傷害',
+            move_energy: ['darkness', 'darkness', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 169,
@@ -2225,11 +2381,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 170,
@@ -2238,11 +2393,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {move_name: '角撞', damage: 60, move_energy: ['darkness', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 171,
@@ -2251,10 +2405,9 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 150,
+        move_1: {move_name: '毒角', damage: 90, move_energy: ['darkness', 'darkness', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2264,11 +2417,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '滑翔', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 173,
@@ -2277,11 +2429,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '翅膀攻擊', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 174,
@@ -2290,10 +2441,14 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 70,
+        move_1: {
+            move_name: '毒瓦斯',
+            damage: 10,
+            move_defect: '將對手的戰鬥寶可夢<b>中毒</b>',
+            move_energy: ['darkness']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2303,10 +2458,14 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 130,
+        move_1: {
+            move_name: '毒液衝擊',
+            damage: 70,
+            move_defect: '若對手的戰鬥寶可夢<b>中毒</b>，則增加50點傷害。',
+            move_energy: ['darkness', 'darkness', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2316,11 +2475,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '瓦斯包圍', damage: 20, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 177,
@@ -2329,13 +2487,15 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 110,
+        ability: {
+            name: '瓦斯漏氣',
+            defect: '若這隻寶可夢在戰鬥上，則在自己的回合時可使用1次。將對手的戰鬥寶可夢<b>中毒</b>。'
+        },
+        move_1: {move_name: '撞擊', damage: 30, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
-
     {
         id: 178,
         name: '大嘴娃',
@@ -2343,11 +2503,15 @@ export const cards: Card[] = [
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 70,
+        move_1: {
+            move_name: '咬碎',
+            damage: 20,
+            move_defect: '擲1次硬幣若為正面，則將對手的戰鬥寶可夢身上的隨機1個能量丟棄。',
+            move_energy: ['metal']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 179,
@@ -2356,11 +2520,10 @@ export const cards: Card[] = [
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 50,
+        move_1: {move_name: '突刺', damage: 30, move_energy: ['metal']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 180,
@@ -2369,11 +2532,10 @@ export const cards: Card[] = [
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 90,
+        move_1: {move_name: '金屬爪', damage: 70, move_energy: ['metal', 'metal']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 181,
@@ -2382,11 +2544,14 @@ export const cards: Card[] = [
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 60,
+        move_1: {
+            move_name: '聚積',
+            move_defect: '從自己的能量區抽出1個鋼能量，附於這隻寶可夢身上。',
+            move_energy: ['metal']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 182,
@@ -2395,9 +2560,9 @@ export const cards: Card[] = [
         type: '/img/type/metal.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 130,
+        ability: {name: '堅硬膜', defect: '這隻寶可夢受到招式的傷害-20點。'},
+        move_1: {move_name: '重磅衝擊', damage: 120, move_energy: ['metal', 'metal', 'metal', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -2409,11 +2574,9 @@ export const cards: Card[] = [
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '衝撞', damage: 60, move_energy: ['water', 'electric']},
+        retreat_cost: 1
     },
     {
         id: 184,
@@ -2422,11 +2585,9 @@ export const cards: Card[] = [
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '尾擊', damage: 80, move_energy: ['water', 'electric', 'colorless']},
+        retreat_cost: 1
     },
     {
         id: 185,
@@ -2435,13 +2596,14 @@ export const cards: Card[] = [
         type: '/img/type/dragon.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 160,
+        move_1: {
+            move_name: '流星群',
+            move_defect: '對手的寶可夢會隨機被選擇4次，被選擇的所有寶可夢受到選擇次數×50點的傷害。',
+            move_energy: ['water', 'electric', 'colorless', 'colorless']
+        },
         retreat_cost: 3
     },
-
     {
         id: 186,
         name: '波波',
@@ -2449,11 +2611,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '起風', damage: 10, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 187,
@@ -2462,11 +2623,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '起風', damage: 30, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 188,
@@ -2475,11 +2635,14 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        ability: {
+            name: '驅離',
+            defect: '在自己的回合時，可使用1次。將對手的戰鬥寶可夢與備戰寶可夢互換。「由對手選擇放置於戰鬥場的寶可夢」。'
+        },
+        move_1: {move_name: '翅膀攻擊', damage: 70, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 189,
@@ -2488,11 +2651,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 40,
+        move_1: {move_name: '咬', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 190,
@@ -2501,11 +2663,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '咬住', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 191,
@@ -2514,11 +2675,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 192,
@@ -2527,11 +2687,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '直衝鑽',
+            damage: 60,
+            move_defect: '擲1次硬幣若為正面，則將對手的戰鬥寶可夢身上的隨機1個能量丟棄。',
+            move_energy: ['colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 193,
@@ -2540,11 +2704,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '拍擊', damage: 30, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 194,
@@ -2553,11 +2716,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '巨聲', damage: 60, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 195,
@@ -2566,11 +2728,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond4.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '催眠曲',
+            damage: 80,
+            move_defect: '將對手的戰鬥寶可夢<b>睡眠</b>。',
+            move_energy: ['colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 196,
@@ -2579,11 +2745,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '聚寶功', damage: 10, move_defect: '從自己的牌庫抽出1張牌。', move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 197,
@@ -2592,11 +2757,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '暗影爪',
+            damage: 40,
+            move_defect: '擲1次硬幣若為正面，則從對手的手牌隨機抽出1張丟棄。',
+            move_energy: ['colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 198,
@@ -2605,11 +2774,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '蔥擊', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 199,
@@ -2618,11 +2786,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 200,
@@ -2631,11 +2798,9 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '啄鑽', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'electric', multiplier: 20},
     },
     {
         id: 201,
@@ -2644,10 +2809,14 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 90,
+        move_1: {
+            move_name: '連環舔舔',
+            damage: 60,
+            move_defect: '擲硬幣直到出現反面，造成正面出現次數的×60點傷害。',
+            move_energy: ['colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2657,10 +2826,9 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 120,
+        move_1: {move_name: '重摑', damage: 60, move_energy: ['colorless', 'colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2670,10 +2838,14 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 100,
+        move_1: {
+            move_name: '迷魂拳',
+            damage: 30,
+            move_defect: '擲2次硬幣，造成正面出現次數×30點傷害。',
+            move_energy: ['grass', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -2683,11 +2855,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '角撞', damage: 50, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 205,
@@ -2696,11 +2867,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '任意複製',
+            damage: 60,
+            move_defect: '選擇對手的場上寶可夢持有的1個招式，作為這個招式使用。若所選招式所需的能量沒有附於這隻寶可夢身上，則這個招式失敗。',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 206,
@@ -2709,11 +2884,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 207,
@@ -2722,11 +2896,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 208,
@@ -2735,11 +2908,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 209,
@@ -2748,11 +2920,11 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        ability: {name: '資料掃描', defect: '在自己的回合時，可使用1次。從自己的牌庫上方抽出1張，查看後回復原狀'},
+        move_1: {move_name: '稜角化', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 210,
@@ -2761,11 +2933,14 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '原始振翅',
+            move_defect: '擲1次硬幣若為正面，則將對手的戰鬥寶可夢放回牌庫。',
+            move_energy: ['colorless', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 211,
@@ -2774,11 +2949,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '滾動', damage: 70, move_energy: ['colorless', 'colorless', 'colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 212,
@@ -2787,11 +2961,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '尾擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 213,
@@ -2800,11 +2973,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 90,
+        move_1: {
+            move_name: '友情之環',
+            damage: 30,
+            move_defect: '造成自己的備戰寶可夢數量×30點傷害。',
+            move_energy: ['colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 214,
@@ -2813,11 +2990,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '撞擊', damage: 30, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 215,
@@ -2826,13 +3002,11 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 120,
+        move_1: {move_name: '滾動衝撞', damage: 80, move_energy: ['colorless', 'colorless', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
-
     {
         id: 216,
         name: '貝殼化石',
@@ -2840,11 +3014,8 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 40,
+        move_1: {move_name: '這張卡可作為HP40的普通屬性的<b>基礎</b>寶可夢放置於場上。若在自己的回合中，則可將廠商的這張卡丟棄。這張卡無法<b>撤退</b>。'}
     },
     {
         id: 217,
@@ -2853,11 +3024,8 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 40,
+        move_1: {move_name: '這張卡可作為HP40的普通屬性的<b>基礎</b>寶可夢放置於場上。若在自己的回合中，則可將廠商的這張卡丟棄。這張卡無法<b>撤退</b>。'}
     },
     {
         id: 218,
@@ -2866,13 +3034,9 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 40,
+        move_1: {move_name: '這張卡可作為HP40的普通屬性的<b>基礎</b>寶可夢放置於場上。若在自己的回合中，則可將廠商的這張卡丟棄。這張卡無法<b>撤退</b>。'}
     },
-
     {
         id: 219,
         name: '莉佳',
@@ -2880,11 +3044,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將自己的1隻草系寶可夢恢復50HP。'},
     },
     {
         id: 220,
@@ -2893,11 +3053,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '選擇1隻自己的水系寶可夢。擲硬幣直到出現反面，從自己的能量區抽出與正面出現的次數相同的數量的水能量，附於那隻寶可夢身上。'},
     },
     {
         id: 221,
@@ -2906,11 +3062,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '在這個回合，自己的「九尾」「烈焰馬」「鴨嘴火獸」使用的招式，對對手的戰鬥寶可夢造成的傷害+30點。'}
     },
     {
         id: 222,
@@ -2919,11 +3071,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將自己的戰鬥場的「臭臭泥」「雙彈瓦斯」放回手牌。'}
     },
     {
         id: 223,
@@ -2932,11 +3080,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '在這個回合，自己的寶可夢使用的招式，對對手的戰鬥寶可夢造成的傷害+10點。'},
     },
     {
         id: 224,
@@ -2945,11 +3089,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '從自己的能量區抽出一個格鬥能量，附於「隆隆岩」或「大岩蛇」身上。'}
     },
     {
         id: 225,
@@ -2958,11 +3098,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將對手的戰鬥寶可夢與備戰寶可夢互換。[由對手選擇放置於戰鬥場的寶可夢。]'},
     },
     {
         id: 226,
@@ -2971,13 +3107,8 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/diamond1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將所有備戰寶可夢的所有雷能量改附於自己的戰鬥場的「雷丘」「頑皮雷彈」「電擊獸」身上。'},
     },
-
     {
         id: 227,
         name: '妙蛙種子',
@@ -2985,11 +3116,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 70,
+        move_1: {move_name: '藤鞭', damage: 40, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 1
     },
     {
         id: 228,
@@ -2998,11 +3128,10 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 80,
+        move_1: {move_name: '口水', damage: 60, move_energy: ['grass', 'colorless']},
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 229,
@@ -3011,11 +3140,15 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 90,
+        move_1: {
+            move_name: '雙重角擊',
+            damage: 50,
+            move_defect: '擲2次硬幣，造成正面出現次數 × 50點傷害。',
+            move_energy: ['grass', 'grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        retreat_cost: 2
     },
     {
         id: 230,
@@ -3024,11 +3157,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '火花',
+            move_defect: '將這隻寶可夢身上的一個火能量丟棄。',
+            damage: 30,
+            move_energy: ['fire']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 231,
@@ -3037,11 +3174,10 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {move_name: '火之鬃', damage: 40, move_energy: ['fire']},
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 232,
@@ -3050,11 +3186,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '水槍', damage: 20, move_energy: ['water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 233,
@@ -3063,11 +3198,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {
+            move_name: '破壞死光',
+            damage: 100,
+            move_defect: '將對手的戰鬥寶可夢身上的隨機1個能量丟棄。',
+            move_energy: ['water', 'water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 234,
@@ -3076,11 +3215,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 100,
+        move_1: {
+            move_name: '水炮',
+            damage: 20,
+            move_defect: '若額外附有3個水能量，則增加70傷害。',
+            move_energy: ['water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 235,
@@ -3089,11 +3232,10 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 80,
+        move_1: {move_name: '電球', damage: 60, move_energy: ['electric', 'electric']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 0
     },
     {
         id: 236,
@@ -3102,11 +3244,15 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {
+            move_name: '精神強念',
+            damage: 60,
+            move_defect: '增加對手的戰鬥寶可夢身上的能量的數量×30點傷害',
+            move_energy: ['psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 237,
@@ -3115,11 +3261,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '擺尾拍擊', damage: 60, move_energy: ['psychic', 'colorless']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 238,
@@ -3128,11 +3273,10 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        move_1: {move_name: '擲泥', damage: 20, move_energy: ['fighting']},
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 239,
@@ -3141,11 +3285,14 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {
+            move_name: '叫聲',
+            move_defect: '在下個對手的回合，受到這個招式的寶可夢使用招式的傷害-20點',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 240,
@@ -3154,11 +3301,15 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '甜蜜攻擊',
+            damage: 80,
+            move_defect: '增加自己的備戰區的「尼多王」的數量×50點傷害',
+            move_energy: ['darkness', 'darkness', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 241,
@@ -3167,10 +3318,9 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 150,
+        move_1: {move_name: '毒角', damage: 90, move_energy: ['darkness', 'darkness', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -3180,11 +3330,10 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {move_name: '翅膀攻擊', damage: 40, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 243,
@@ -3193,10 +3342,13 @@ export const cards: Card[] = [
         type: '/img/type/darkness.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 110,
+        ability: {
+            name: '瓦斯漏氣',
+            defect: '若這隻寶可夢在戰鬥上，則在自己的回合時可使用1次。將對手的戰鬥寶可夢<b>中毒</b>。'
+        },
+        move_1: {move_name: '撞擊', damage: 30, move_energy: ['darkness']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -3206,10 +3358,12 @@ export const cards: Card[] = [
         type: '/img/type/dragon.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 160,
+        move_1: {
+            move_name: '流星群',
+            move_defect: '對手的寶可夢會隨機被選擇4次，被選擇的所有寶可夢受到選擇次數×50點的傷害。',
+            move_energy: ['water', 'electric', 'colorless', 'colorless']
+        },
         retreat_cost: 3
     },
     {
@@ -3219,11 +3373,14 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        ability: {
+            name: '驅離',
+            defect: '在自己的回合時，可使用1次。將對手的戰鬥寶可夢與備戰寶可夢互換。「由對手選擇放置於戰鬥場的寶可夢」。'
+        },
+        move_1: {move_name: '翅膀攻擊', damage: 70, move_energy: ['colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 246,
@@ -3232,11 +3389,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '聚寶功', damage: 10, move_defect: '從自己的牌庫抽出1張牌。', move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 247,
@@ -3245,11 +3401,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 70,
+        move_1: {
+            move_name: '任意複製',
+            damage: 60,
+            move_defect: '選擇對手的場上寶可夢持有的1個招式，作為這個招式使用。若所選招式所需的能量沒有附於這隻寶可夢身上，則這個招式失敗。',
+            move_energy: ['colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 248,
@@ -3258,11 +3418,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '撞擊', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 249,
@@ -3271,11 +3430,11 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 50,
+        ability: {name: '資料掃描', defect: '在自己的回合時，可使用1次。從自己的牌庫上方抽出1張，查看後回復原狀'},
+        move_1: {move_name: '稜角化', damage: 20, move_energy: ['colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 250,
@@ -3284,11 +3443,10 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star1.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '滾動', damage: 70, move_energy: ['colorless', 'colorless', 'colorless', 'colorless']},
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 4
     },
     {
         id: 251,
@@ -3299,7 +3457,12 @@ export const cards: Card[] = [
         packs: '',
         hp: 190,
         move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '巨型綻放',
+            damage: 100,
+            move_defect: '將這隻寶可夢恢復30HP。',
+            move_energy: ['grass', 'grass', 'colorless', 'colorless']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -3310,9 +3473,13 @@ export const cards: Card[] = [
         type: '/img/type/grass.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
+        hp: 160,
+        move_1: {
+            move_name: '熱帶揮擊',
+            damage: 40,
+            move_defect: '擲1次硬幣若為正面，則增加40點傷害。',
+            move_energy: ['grass']
+        },
         weakness: {type: 'fire', multiplier: 20},
         retreat_cost: 3
     },
@@ -3323,11 +3490,16 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 180,
+        move_1: {move_name: '劈開', damage: 60, move_energy: ['fire', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '紅蓮風暴',
+            damage: 200,
+            move_defect: '將這隻寶可夢身上的兩個火能量丟棄。',
+            move_energy: ['fire', 'fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 254,
@@ -3336,11 +3508,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {
+            move_name: '猛火衝刺',
+            damage: 120,
+            move_defect: '這隻寶可夢也收到20點傷害。',
+            move_energy: ['fire', 'fire', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 255,
@@ -3349,11 +3525,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '烈火之舞',
+            move_defect: '擲3次硬幣，從自己的能量去抽出與正面出現的次數相同數量的火能量，以任意方式附於備戰區的火系寶可夢身上。',
+            move_energy: ['fire']
+        },
+        move_2: {move_name: '高溫爆破', damage: 70, move_energy: ['fire', 'colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 256,
@@ -3362,10 +3542,15 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 180,
+        move_1: {move_name: '衝浪', damage: 40, move_energy: ['water', 'colorless']},
+        move_2: {
+            move_name: '水箭炮',
+            damage: 100,
+            move_defect: '若額外附有2個水能量，則增加60點傷害',
+            move_energy: ['water', 'water', 'colorless']
+        },
+        weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -3375,11 +3560,10 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {move_name: '水泡濺射', damage: 90, move_energy: ['water', 'water']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 0
     },
     {
         id: 258,
@@ -3388,11 +3572,16 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {move_name: '冰之翼', damage: 40, move_energy: ['water', 'colorless']},
+        move_2: {
+            move_name: '暴風雪',
+            damage: 80,
+            move_defect: '對手的所有備戰寶可夢也受到10點傷害。',
+            move_energy: ['water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 259,
@@ -3401,11 +3590,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '電氣陣',
+            damage: 30,
+            move_defect: '造成自己的備戰區雷系寶可夢數量×30點傷害。',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 260,
@@ -3414,11 +3607,16 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['electric']},
+        move_2: {
+            move_name: '颶風雷電',
+            damage: 50,
+            move_defect: '擲4次硬幣，造成正面出現的次數×50點傷害。',
+            move_energy: ['electric', 'electric', 'electric']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 261,
@@ -3427,11 +3625,11 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 170,
+        ability: {name: '影子咒縛', defect: '只要這隻寶可夢在戰鬥場上，對手無法從手牌使出支援者卡。'},
+        move_1: {move_name: '陰森射擊', damage: 100, move_energy: ['psychic', 'psychic', 'psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 262,
@@ -3440,11 +3638,16 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '念動彈', damage: 50, move_energy: ['psychic', 'colorless']},
+        move_2: {
+            move_name: '精神衝鋒',
+            damage: 100,
+            move_defect: '將這隻寶可夢身上的2個超能力能量丟棄。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 263,
@@ -3453,10 +3656,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 180,
+        move_1: {move_name: '百萬噸重拳', damage: 120, move_energy: ['fighting', 'fighting', 'fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -3466,24 +3668,32 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '骨頭迴力鏢',
+            damage: 60,
+            move_defect: '擲2次硬幣，造成正面出現的次數×80點傷害。',
+            move_energy: ['fighting', 'fighting']
+        },
+        weakness: {type: 'grass', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 265,
-        name: '波克比EX',
+        name: '胖可丁EX',
         imageUrl: '/img/GeneticApex/265.jpg',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '催眠曲',
+            damage: 80,
+            move_defect: '將對手的戰鬥寶可夢<b>睡眠</b>。',
+            move_energy: ['colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 266,
@@ -3492,11 +3702,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將自己的1隻草系寶可夢恢復50HP。'},
     },
     {
         id: 267,
@@ -3505,11 +3711,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '選擇1隻自己的水系寶可夢。擲硬幣直到出現反面，從自己的能量區抽出與正面出現的次數相同的數量的水能量，附於那隻寶可夢身上。'},
     },
     {
         id: 268,
@@ -3518,11 +3720,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '在這個回合，自己的「九尾」「烈焰馬」「鴨嘴火獸」使用的招式，對對手的戰鬥寶可夢造成的傷害+30點。'}
     },
     {
         id: 269,
@@ -3531,11 +3729,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將自己的戰鬥場的「臭臭泥」「雙彈瓦斯」放回手牌。'}
     },
     {
         id: 270,
@@ -3544,11 +3738,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '在這個回合，自己的寶可夢使用的招式，對對手的戰鬥寶可夢造成的傷害+10點。'},
     },
     {
         id: 271,
@@ -3557,11 +3747,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '從自己的能量區抽出一個格鬥能量，附於「隆隆岩」或「大岩蛇」身上。'}
     },
     {
         id: 272,
@@ -3570,11 +3756,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將對手的戰鬥寶可夢與備戰寶可夢互換。[由對手選擇放置於戰鬥場的寶可夢。]'},
     },
     {
         id: 273,
@@ -3583,11 +3765,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        move_1: {move_name: '將所有備戰寶可夢的所有雷能量改附於自己的戰鬥場的「雷丘」「頑皮雷彈」「電擊獸」身上。'}
     },
     {
         id: 274,
@@ -3596,11 +3774,15 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '烈火之舞',
+            move_defect: '擲3次硬幣，從自己的能量去抽出與正面出現的次數相同數量的火能量，以任意方式附於備戰區的火系寶可夢身上。',
+            move_energy: ['fire']
+        },
+        move_2: {move_name: '高溫爆破', damage: 70, move_energy: ['fire', 'colorless', 'colorless']},
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 275,
@@ -3609,11 +3791,16 @@ export const cards: Card[] = [
         type: '/img/type/water.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {move_name: '冰之翼', damage: 40, move_energy: ['water', 'colorless']},
+        move_2: {
+            move_name: '暴風雪',
+            damage: 80,
+            move_defect: '對手的所有備戰寶可夢也受到10點傷害。',
+            move_energy: ['water', 'water', 'water']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 276,
@@ -3622,11 +3809,16 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 130,
+        move_1: {move_name: '啄', damage: 20, move_energy: ['electric']},
+        move_2: {
+            move_name: '颶風雷電',
+            damage: 50,
+            move_defect: '擲4次硬幣，造成正面出現的次數×50點傷害。',
+            move_energy: ['electric', 'electric', 'electric']
+        },
+        weakness: {type: 'electric', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 277,
@@ -3635,11 +3827,11 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 170,
+        ability: {name: '影子咒縛', defect: '只要這隻寶可夢在戰鬥場上，對手無法從手牌使出支援者卡。'},
+        move_1: {move_name: '陰森射擊', damage: 100, move_energy: ['psychic', 'psychic', 'psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 278,
@@ -3648,10 +3840,9 @@ export const cards: Card[] = [
         type: '/img/type/fighting.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
+        hp: 180,
+        move_1: {move_name: '百萬噸重拳', damage: 120, move_energy: ['fighting', 'fighting', 'fighting']},
+        weakness: {type: 'psychic', multiplier: 20},
         retreat_cost: 3
     },
     {
@@ -3661,11 +3852,15 @@ export const cards: Card[] = [
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star2.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 140,
+        move_1: {
+            move_name: '催眠曲',
+            damage: 80,
+            move_defect: '將對手的戰鬥寶可夢<b>睡眠</b>。',
+            move_energy: ['colorless', 'colorless', 'colorless']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 280,
@@ -3674,11 +3869,16 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/star3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 180,
+        move_1: {move_name: '劈開', damage: 60, move_energy: ['fire', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '紅蓮風暴',
+            damage: 200,
+            move_defect: '將這隻寶可夢身上的兩個火能量丟棄。',
+            move_energy: ['fire', 'fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 281,
@@ -3687,11 +3887,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/star3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '電氣陣',
+            damage: 30,
+            move_defect: '造成自己的備戰區雷系寶可夢數量×30點傷害。',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 282,
@@ -3700,11 +3904,16 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '念動彈', damage: 50, move_energy: ['psychic', 'colorless']},
+        move_2: {
+            move_name: '精神衝鋒',
+            damage: 100,
+            move_defect: '將這隻寶可夢身上的2個超能力能量丟棄。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 283,
@@ -3713,11 +3922,10 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/star3.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 60,
+        move_1: {move_name: '對手公開手牌', move_energy: ['psychic']},
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 284,
@@ -3726,11 +3934,16 @@ export const cards: Card[] = [
         type: '/img/type/fire.png',
         rarity: '/img/grade/crown.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 180,
+        move_1: {move_name: '劈開', damage: 60, move_energy: ['fire', 'colorless', 'colorless']},
+        move_2: {
+            move_name: '紅蓮風暴',
+            damage: 200,
+            move_defect: '將這隻寶可夢身上的兩個火能量丟棄。',
+            move_energy: ['fire', 'fire', 'colorless', 'colorless']
+        },
+        weakness: {type: 'water', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 285,
@@ -3739,11 +3952,15 @@ export const cards: Card[] = [
         type: '/img/type/electric.png',
         rarity: '/img/grade/crown.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 120,
+        move_1: {
+            move_name: '電氣陣',
+            damage: 30,
+            move_defect: '造成自己的備戰區雷系寶可夢數量×30點傷害。',
+            move_energy: ['electric', 'electric']
+        },
+        weakness: {type: 'fighting', multiplier: 20},
+        retreat_cost: 1
     },
     {
         id: 286,
@@ -3752,11 +3969,16 @@ export const cards: Card[] = [
         type: '/img/type/psychic.png',
         rarity: '/img/grade/crown.png',
         packs: '',
-        hp: 190,
-        move_1: {move_name: '飛葉快刀', damage: 60, move_energy: ['grass', 'colorless', 'colorless']},
-        move_2: {move_name: '巨型綻放', damage:100, move_energy: ['grass', 'grass', 'colorless', 'colorless']},
-        weakness: {type: 'fire', multiplier: 20},
-        retreat_cost: 3
+        hp: 150,
+        move_1: {move_name: '念動彈', damage: 50, move_energy: ['psychic', 'colorless']},
+        move_2: {
+            move_name: '精神衝鋒',
+            damage: 100,
+            move_defect: '將這隻寶可夢身上的2個超能力能量丟棄。',
+            move_energy: ['psychic', 'psychic', 'colorless', 'colorless']
+        },
+        weakness: {type: 'darkness', multiplier: 20},
+        retreat_cost: 2
     },
     {
         id: 90001,
@@ -3765,7 +3987,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '將自己的1隻寶可夢恢復20HP'},
+        move_1: {move_name: '將自己的1隻寶可夢恢復20HP'},
     },
     {
         id: 90002,
@@ -3774,7 +3996,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '在這個回合，自己的戰鬥寶可夢撤退所需的能量減少1個' },
+        move_1: {move_name: '在這個回合，自己的戰鬥寶可夢撤退所需的能量減少1個'},
     },
     {
         id: 90003,
@@ -3783,7 +4005,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '查看對手所有手牌的正面' },
+        move_1: {move_name: '查看對手所有手牌的正面'},
     },
     {
         id: 90004,
@@ -3792,7 +4014,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '查看自己的牌庫上方3張卡，回復原樣' },
+        move_1: {move_name: '查看自己的牌庫上方3張卡，回復原樣'},
     },
     {
         id: 90005,
@@ -3801,7 +4023,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '從自己的牌庫隨機抽出一張基礎' },
+        move_1: {move_name: '從自己的牌庫隨機抽出一張基礎'},
     },
     {
         id: 90006,
@@ -3810,7 +4032,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '將對手的手牌全部放回牌庫。對手從牌庫抽出三3張牌' },
+        move_1: {move_name: '將對手的手牌全部放回牌庫。對手從牌庫抽出三3張牌'},
     },
     {
         id: 90007,
@@ -3819,7 +4041,7 @@ export const cards: Card[] = [
         type: '',
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '從自己的牌庫抽出2張卡' },
+        move_1: {move_name: '從自己的牌庫抽出2張卡'},
     },
     {
         id: 90009,
@@ -3829,8 +4051,8 @@ export const cards: Card[] = [
         hp: 60,
         rarity: '/img/grade/promo-a.png',
         packs: '',
-        move_1: { move_name: '咬', damage: 20, move_energy: ['electric'] },
-        weakness: { type: 'fighting', multiplier: 20 },
+        move_1: {move_name: '咬', damage: 20, move_energy: ['electric']},
+        weakness: {type: 'fighting', multiplier: 20},
         retreat_cost: 1
     },
 ];
