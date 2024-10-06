@@ -448,29 +448,30 @@ export default defineComponent({
 
 .card-slot {
     aspect-ratio: 2.5 / 3.5;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: #333333; /* 深灰色背景 */
+    border: 1px solid var(--primary-color); /* 黃色邊框 */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    overflow: hidden; /* 添加這行 */
-    position: relative; /* 添加這行 */
+    overflow: hidden;
+    position: relative;
 }
 
 .card-slot img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    position: absolute; /* 添加這行 */
-    top: 0; /* 添加這行 */
-    left: 0; /* 添加這行 */
-    width: 100%; /* 添加這行 */
-    height: 100%; /* 添加這行 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .card-slot.empty {
-    cursor: default;
+    background-color: #222222; /* 更深的灰色背景 */
+    border: 1px dashed var(--primary-color);
 }
 
 .card-gallery {
@@ -487,14 +488,17 @@ export default defineComponent({
     width: 100px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    background-color: #333333; /* 深灰色背景 */
+    border: 1px solid var(--primary-color); /* 黃色邊框 */
 }
 
 .gallery-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .gallery-card.selected {
-    box-shadow: 0 0 10px 3px #4CAF50;
+    box-shadow: 0 0 10px 3px var(--secondary-color);
 }
 
 .gallery-card.disabled {

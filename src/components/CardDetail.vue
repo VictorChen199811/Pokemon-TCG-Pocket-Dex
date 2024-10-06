@@ -64,7 +64,7 @@
         <hr>
         <div class="card-number">
           <span>{{ card.id }} of {{ totalCards }}</span>
-          <button @click="goBack" class="back-button">返回</button>
+          <el-button @click="goBack" type="primary" size="small">返回</el-button>
         </div>
       </div>
     </div>
@@ -120,24 +120,25 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: #f0f0f0;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .card-content {
   display: flex;
   width: 100%;
   max-width: 800px;
-  background-color: white;
+  background-color: #333333; /* 深灰色背景 */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* 黃色陰影 */
   position: relative;
 }
 
 .card-image-container {
   flex: 1;
   padding: 1rem;
-  background-color: #f8f8f8;
+  background-color: #222222; /* 更深的灰色背景 */
 }
 
 .card-image {
@@ -163,6 +164,7 @@ export default defineComponent({
 .hp {
   display: flex;
   align-items: center;
+  color: var(--primary-color);
 }
 
 .type-image, .energy-image {
@@ -196,10 +198,12 @@ export default defineComponent({
   font-size: 0.9em;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .move-defect :deep(b) {
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .card-footer {
@@ -226,25 +230,9 @@ export default defineComponent({
   height: 20px;
 }
 
-.back-button {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.back-button:hover {
-  background-color: #45a049;
-}
-
 hr {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--primary-color);
   margin: 1rem 0;
   width: 100%;
 }
@@ -259,7 +247,6 @@ hr {
   }
 }
 
-/* 新增 ability 相關樣式 */
 .ability {
   margin-bottom: 1rem;
 }
@@ -269,8 +256,8 @@ hr {
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  color: red;
-  font-weight: bold;  /* 添加這行來使文字變粗 */
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .ability-icon {
@@ -282,13 +269,12 @@ hr {
 .ability p {
   font-style: italic;
   font-size: 0.9em;
-  color: inherit;  /* 使用父元素的文字顏色 */
-  text-decoration: none;  /* 移除下劃線 */
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .ability p :deep(b), .move-defect :deep(b) {
   font-weight: bold;
+  color: var(--primary-color);
 }
-
-/* ... 其他樣式保持不變 ... */
 </style>

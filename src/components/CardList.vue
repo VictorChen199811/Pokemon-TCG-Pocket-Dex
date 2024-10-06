@@ -98,11 +98,11 @@ h2 {
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--primary-color);
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #333333; /* 深灰色背景 */
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@ h2 {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px var(--primary-color);
 }
 
 .card-image {
@@ -125,7 +125,7 @@ h2 {
 
 .card h3 {
   margin: 0.5rem 0;
-  color: #2c3e50;
+  color: var(--text-color);
   font-size: 1rem;
 }
 
