@@ -166,8 +166,8 @@ export default defineComponent({
             const cardWidth = 100 * scale;
             const cardHeight = 140 * scale;
             const padding = 10 * scale;
-            const columns = 10;
-            const rows = 2;
+            const columns = isMobile.value ? 4 : 10;
+            const rows = isMobile.value ? 5 : 2;
 
             const borderWidth = 2 * scale;
             const outerPadding = 20 * scale;
