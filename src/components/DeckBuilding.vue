@@ -78,7 +78,7 @@
 import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue'
 import { cards } from '@/data/cards'
 import type { Card } from '@/data/cards'
-import { toJpeg } from 'html-to-image'  // 保留這個導入
+import { toJpeg } from 'html-to-image'  // 保留這個���入
 
 export default defineComponent({
     name: 'DeckBuilding',
@@ -153,54 +153,73 @@ export default defineComponent({
             if (deckContainer.value) {
                 showNameInputBox.value = false
                 try {
+                    // 等待所有圖片加載完成
+                    await Promise.all(Array.from(deckContainer.value.querySelectorAll('img')).map(img => {
+                        if (img.complete) return Promise.resolve();
+                        return new Promise(resolve => {
+                            img.onload = img.onerror = resolve;
+                        });
+                    }));
+
                     const dataUrl = await toJpeg(deckContainer.value, {
                         quality: 0.95,
                         backgroundColor: 'white',
                         width: deckContainer.value.offsetWidth,
                         height: deckContainer.value.offsetHeight,
-                    })
+                        style: {
+                            transform: 'scale(1)',
+                            transformOrigin: 'top left'
+                        }
+                    });
 
                     // 創建一個新的 Image 對象來加載生成的圖片
-                    const img = new Image()
+                    const img = new Image();
                     img.onload = () => {
-                        const canvas = document.createElement('canvas')
-                        const ctx = canvas.getContext('2d')
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
                         if (ctx) {
-                            const borderWidth = 10  // 邊框寬度
-                            canvas.width = img.width + borderWidth * 2
-                            canvas.height = img.height + borderWidth * 2
+                            const borderWidth = 10;  // 邊框寬度
+                            canvas.width = img.width + borderWidth * 2;
+                            canvas.height = img.height + borderWidth * 2;
 
                             // 繪製白色邊框
-                            ctx.fillStyle = 'white'
-                            ctx.fillRect(0, 0, canvas.width, canvas.height)
+                            ctx.fillStyle = 'white';
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
                             // 在邊框內繪製原始圖像
-                            ctx.drawImage(img, borderWidth, borderWidth)
+                            ctx.drawImage(img, borderWidth, borderWidth);
 
                             // 添加水印文字
-                            ctx.font = 'bold 24px Arial'
-                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)'  // 使用半透明黑色
-                            const text = 'pokemon-tcg-pocket-dex.com'
-                            const textWidth = ctx.measureText(text).width
-                            ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20)
+                            ctx.font = 'bold 24px Arial';
+                            ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';  // 使用半透明黑色
+                            const text = 'pokemon-tcg-pocket-dex.com';
+                            const textWidth = ctx.measureText(text).width;
+                            ctx.fillText(text, canvas.width - textWidth - 20, canvas.height - 20);
 
                             // 再次繪製文字，但稍微偏移，創建陰影效果
-                            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)'
-                            ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22)
+                            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+                            ctx.fillText(text, canvas.width - textWidth - 22, canvas.height - 22);
 
-                            const link = document.createElement('a')
-                            link.download = `${deckName.value || 'deck'}.jpg`
-                            link.href = canvas.toDataURL('image/jpeg', 0.9)  // 使用較高的質量設置
-                            link.click()
+                            // 使用 Blob 和 URL.createObjectURL 來創建下載鏈接
+                            canvas.toBlob(blob => {
+                                if (blob) {
+                                    const url = URL.createObjectURL(blob);
+                                    const link = document.createElement('a');
+                                    link.download = `${deckName.value || 'deck'}.jpg`;
+                                    link.href = url;
+                                    link.click();
+                                    URL.revokeObjectURL(url);
+                                }
+                            }, 'image/jpeg', 0.95);
                         }
-                    }
-                    img.src = dataUrl
+                    };
+                    img.src = dataUrl;
                 } catch (error) {
-                    console.error('導出失敗:', error)
-                    alert('導出失敗，請稍後再試。')
+                    console.error('導出失敗:', error);
+                    alert('導出失敗，請稍後再試。');
                 }
             }
-        }
+        };
 
         const toggleType = (type: string) => {
             const index = selectedTypes.value.indexOf(type)
