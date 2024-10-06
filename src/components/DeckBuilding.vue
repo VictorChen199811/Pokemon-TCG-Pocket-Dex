@@ -77,6 +77,12 @@
 
         <!-- 添加回到顶部的按钮 -->
         <button @click="scrollToTop" class="scroll-to-top" v-show="showScrollTop">UP</button>
+
+        <!-- Loading 遮罩 -->
+        <div v-if="isLoading" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>正在生成牌組圖片，請稍候...</p>
+        </div>
     </div>
 </template>
 
@@ -97,6 +103,7 @@ export default defineComponent({
         const isFilterVisible = ref(true)  // 新增：控制过滤器显示状态
         const isMobile = ref(false)
         const showScrollTop = ref(false)
+        const isLoading = ref(false)
 
         const types = [
             '/img/type/grass.png',
@@ -254,6 +261,7 @@ export default defineComponent({
 
         const exportAsJPG = async () => {
             showNameInputBox.value = false;
+            isLoading.value = true; // 顯示 loading 遮罩
             try {
                 const canvas = await exportDeckAsImage();
                 if (canvas) {
@@ -268,10 +276,13 @@ export default defineComponent({
             } catch (error) {
                 console.error('導出失敗:', error);
                 alert('導出失敗，請稍後再試。');
+            } finally {
+                isLoading.value = false; // 隱藏 loading 遮罩
             }
         };
 
         const shareDeck = async () => {
+            isLoading.value = true; // 顯示 loading 遮罩
             try {
                 const canvas = await exportDeckAsImage();
                 if (canvas) {
@@ -305,6 +316,8 @@ export default defineComponent({
             } catch (error) {
                 console.error('生成圖片失敗:', error);
                 alert('生成圖片失敗，請稍後再試。');
+            } finally {
+                isLoading.value = false; // 隱藏 loading 遮罩
             }
         };
 
@@ -390,6 +403,7 @@ export default defineComponent({
             showScrollTop,
             scrollToTop,
             clearDeck,
+            isLoading,
         }
     }
 })
@@ -709,5 +723,38 @@ export default defineComponent({
 
 .clear-deck-button:hover {
     background-color: #c82333;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: white;
+    margin-top: 10px;
 }
 </style>
