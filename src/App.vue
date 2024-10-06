@@ -17,9 +17,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useHead } from '@vueuse/head'
 
 export default defineComponent({
   name: 'App',
+  setup() {
+    useHead({
+      title: 'Pokémon TCG Pocket Dex - 寶可夢卡牌資料庫',
+      meta: [
+        { name: 'description', content: '探索寶可夢卡牌遊戲的完整資料庫，包括卡牌列表和牌組構築工具。' },
+        { name: 'keywords', content: '寶可夢, Pokémon, TCG, 卡牌遊戲, 牌組構築, 資料庫' },
+      ],
+    })
+  }
 })
 </script>
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://www.pokemon-tcg-pocket-dex.com/sitemap.xml

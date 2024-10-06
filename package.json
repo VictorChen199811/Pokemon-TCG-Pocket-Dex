@@ -13,6 +13,7 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "connect-history-api-fallback": "^2.0.0",
     "element-plus": "^2.3.4",
     "express": "^4.21.0",
