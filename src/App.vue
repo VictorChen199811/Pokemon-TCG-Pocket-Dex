@@ -23,10 +23,10 @@ export default defineComponent({
   name: 'App',
   setup() {
     useHead({
-      title: 'Pokémon TCG Pocket Dex - 寶可夢卡牌資料庫',
+      title: 'Pokémon TCG Pocket Dex - 寶可夢卡牌口袋版資料庫',
       meta: [
         { name: 'description', content: '探索寶可夢卡牌遊戲的完整資料庫，包括卡牌列表和牌組構築工具。' },
-        { name: 'keywords', content: '寶可夢, Pokémon, TCG, 卡牌遊戲, 牌組構築, 資料庫' },
+        { name: 'keywords', content: '寶可夢, Pokémon, TCG,Pokémon TCG Pokect,PTCG Pocket, 卡牌遊戲, 牌組構築, 資料庫' },
       ],
     })
   }
