@@ -1491,7 +1491,7 @@ export const cards: Card[] = [
             move_name: '颶風雷電',
             damage: 50,
             move_defect: '擲4次硬幣，造成正面出現的次數×50點傷害。',
-            move_energy: ['grass', 'grass', 'colorless', 'colorless']
+            move_energy: ['electric', 'electric', 'electric',]
         },
         weakness: {type: 'electric', multiplier: 20},
         retreat_cost: 1
