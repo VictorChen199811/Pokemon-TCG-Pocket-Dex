@@ -2880,7 +2880,7 @@ export const cards: Card[] = [
     {
         id: 206,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/GeneticApex_10_00206.webp',
+        imageUrl: '/img/GeneticApex/GeneticApex_10_00206_00.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2892,7 +2892,7 @@ export const cards: Card[] = [
     {
         id: 207,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/GeneticApex_10_00206.webp',
+        imageUrl: '/img/GeneticApex/GeneticApex_10_00206_01.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
@@ -2904,7 +2904,7 @@ export const cards: Card[] = [
     {
         id: 208,
         name: '伊布',
-        imageUrl: '/img/GeneticApex/GeneticApex_10_00206.webp',
+        imageUrl: '/img/GeneticApex/GeneticApex_10_00206_02.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/diamond1.png',
         packs: '',
