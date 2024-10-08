@@ -188,9 +188,13 @@ h2 {
 }
 
 :deep(.el-dialog) {
-  background-color: black !important; /* 设置对话框背景为黑色 */
-  border-radius: 10px; /* 圆角 */
-  overflow: hidden; /* 确保内容不会溢出圆角 */
+  background-color: black !important;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 60% !important;
+    /* 网页版使用60%宽度 */
+    max-width: 900px;
+    /* 设置最大宽度，防止在大屏幕上过宽 */
 }
 
 :deep(.el-dialog__header) {
@@ -200,6 +204,10 @@ h2 {
 :deep(.el-dialog__body) {
   padding: 0;
 }
-
-/* 其他样式保持不变 */
+@media (max-width: 768px) {
+  :deep(.el-dialog) {
+    width: 80% !important;
+    /* 移动设备使用80%宽度 */
+  }
+}
 </style>
