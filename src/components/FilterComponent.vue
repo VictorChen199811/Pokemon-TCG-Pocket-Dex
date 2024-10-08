@@ -137,11 +137,11 @@ export default defineComponent({
 
     const getPackName = (pack: string) => {
       switch (pack) {
-        case 'Charizard':
+        case 'charizard':
           return '噴火龍'
-        case 'Mewtwo':
+        case 'mewtwo':
           return '超夢'
-        case 'Pikachu':
+        case 'pikachu':
           return '皮卡丘'
         default:
           return pack
