@@ -24,17 +24,27 @@
       </div>
     </div>
     <div class="filter-row">
+      <label>系列</label>
+      <select v-model="selectedSeries" @change="updatePacks">
+        <option value="">全部顯示</option>
+        <option v-for="series in availableSeries" :key="series" :value="series">
+          {{ getSeriesName(series) }}
+        </option>
+      </select>
+    </div>
+    <div class="filter-row">
       <label>擴充包</label>
       <select v-model="selectedPack" @change="emitFilter">
-        <option value="">請選擇</option>
-        <!-- 這裡需要添加包選項 -->
+        <option value="">全部顯示</option>
+        <option v-for="pack in availablePacks" :key="pack" :value="pack">{{ getPackName(pack) }}</option>
       </select>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
+import { cards } from '../data/cards'
 
 export default defineComponent({
   name: 'FilterComponent',
@@ -43,7 +53,7 @@ export default defineComponent({
     const searchTerm = ref('')
     const selectedTypes = ref<string[]>([])
     const selectedRarities = ref<string[]>([])
-    const selectedCardName = ref('')
+    const selectedSeries = ref('')
     const selectedPack = ref('')
 
     const types = [
@@ -70,6 +80,22 @@ export default defineComponent({
       { value: '/img/grade/crown.png', label: '👑' }
     ]
 
+    const availableSeries = computed(() => {
+      return [...new Set(cards.map(card => card.packs))].sort()
+    })
+
+    const availablePacks = computed(() => {
+      let packs;
+      if (!selectedSeries.value) {
+        packs = [...new Set(cards.flatMap(card => card.pack))];
+      } else {
+        packs = [...new Set(cards
+          .filter(card => card.packs === selectedSeries.value)
+          .flatMap(card => card.pack))];
+      }
+      return packs.filter(pack => pack && pack.trim() !== '').sort();
+    })
+
     const toggleType = (type: string) => {
       const index = selectedTypes.value.indexOf(type)
       if (index === -1) {
@@ -90,27 +116,54 @@ export default defineComponent({
       emitFilter()
     }
 
+    const updatePacks = () => {
+      selectedPack.value = ''
+      emitFilter()
+    }
+
     const emitFilter = () => {
       emit('filter', {
         searchTerm: searchTerm.value,
         types: selectedTypes.value,
         rarities: selectedRarities.value,
-        cardName: selectedCardName.value,
+        series: selectedSeries.value,
         pack: selectedPack.value
       })
+    }
+
+    const getSeriesName = (series: string) => {
+      return series === 'A' ? '最強的基因' : series
+    }
+
+    const getPackName = (pack: string) => {
+      switch (pack) {
+        case 'Charizard':
+          return '噴火龍'
+        case 'Mewtwo':
+          return '超夢'
+        case 'Pikachu':
+          return '皮卡丘'
+        default:
+          return pack
+      }
     }
 
     return {
       searchTerm,
       selectedTypes,
       selectedRarities,
-      selectedCardName,
+      selectedSeries,
       selectedPack,
       types,
       rarities,
+      availableSeries,
+      availablePacks,
       toggleType,
       toggleRarity,
-      emitFilter
+      updatePacks,
+      emitFilter,
+      getSeriesName,
+      getPackName
     }
   }
 })

@@ -234,12 +234,7 @@ export default defineComponent({
                     await new Promise((resolve) => {
                         img.onload = resolve;
                     });
-                    // 縮小卡片 10%
-                    const scaledCardWidth = cardWidth * 0.9 / scale;
-                    const scaledCardHeight = cardHeight * 0.9 / scale;
-                    const offsetX = (cardWidth / scale - scaledCardWidth) / 2;
-                    const offsetY = (cardHeight / scale - scaledCardHeight) / 2;
-                    ctx.drawImage(img, x + offsetX, y + offsetY, scaledCardWidth, scaledCardHeight);
+                    ctx.drawImage(img, x, y, cardWidth / scale, cardHeight / scale);
                 } else {
                     // 繪製空白格子
                     ctx.fillStyle = '#f0f0f0';
@@ -288,8 +283,8 @@ export default defineComponent({
                 if (canvas) {
                     canvas.toBlob(async (blob) => {
                         if (blob) {
-                            const file = new File([blob], 'deck.jpg', { type: 'image/jpeg' });
-                            if (navigator.share) {
+                            const file = new File([blob], 'buildDeck.jpg', { type: 'image/jpeg' });
+                            if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
                                 try {
                                     await navigator.share({
                                         files: [file],
@@ -298,15 +293,10 @@ export default defineComponent({
                                     });
                                 } catch (error) {
                                     console.error('分享失敗:', error);
-                                    alert('分享失敗，請稍後再試。');
+                                    downloadImage(blob);
                                 }
                             } else {
-                                const url = URL.createObjectURL(blob);
-                                const link = document.createElement('a');
-                                link.href = url;
-                                link.download = `${deckName.value || 'deck'}.jpg`;
-                                link.click();
-                                setTimeout(() => URL.revokeObjectURL(url), 100);
+                                downloadImage(blob);
                             }
                         }
                     }, 'image/jpeg', 0.95);
@@ -319,6 +309,15 @@ export default defineComponent({
             } finally {
                 isLoading.value = false; // 隱藏 loading 遮罩
             }
+        };
+
+        const downloadImage = (blob: Blob) => {
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${deckName.value || 'deck'}.jpg`;
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(url), 100);
         };
 
         const toggleType = (type: string) => {

@@ -24,7 +24,7 @@ interface Filter {
   searchTerm: string;
   types: string[];
   rarities: string[];
-  cardName: string;
+  series: string;
   pack: string;
 }
 
@@ -34,13 +34,12 @@ export default defineComponent({
     FilterComponent
   },
   setup() {
-    const cardList = ref<Card[]>(cards)
-
+    const router = useRouter()
     const filter = ref<Filter>({
       searchTerm: '',
       types: [],
       rarities: [],
-      cardName: '',
+      series: '',
       pack: ''
     })
 
@@ -49,16 +48,15 @@ export default defineComponent({
     }
 
     const filteredCards = computed(() => {
-      return cardList.value.filter(card => {
+      return cards.filter(card => {
         const searchMatch = card.name.toLowerCase().includes(filter.value.searchTerm.toLowerCase())
         const typeMatch = filter.value.types.length === 0 || filter.value.types.includes(card.type)
         const rarityMatch = filter.value.rarities.length === 0 || filter.value.rarities.includes(card.rarity)
-        const cardNameMatch = !filter.value.cardName || card.name === filter.value.cardName
-        return searchMatch && typeMatch && rarityMatch && cardNameMatch
+        const seriesMatch = !filter.value.series || card.packs === filter.value.series
+        const packMatch = !filter.value.pack || (card.pack && card.pack.some(p => p === filter.value.pack))
+        return searchMatch && typeMatch && rarityMatch && seriesMatch && packMatch
       })
     })
-
-    const router = useRouter()
 
     const goToCardDetail = (id: number) => {
       router.push(`/card/${id}`)

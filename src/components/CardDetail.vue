@@ -49,6 +49,18 @@
           <p v-if="card.move_2?.move_defect" class="move-defect" v-html="formatAbilityText(card.move_2.move_defect)"></p>
         </div>
         <hr>
+        <div class="card-series-pack">
+          <div class="card-series" v-if="card.packs">
+            <span>系列：</span>
+            <img :src="getSeriesImage(card.packs)" :alt="card.packs" class="series-image">
+          </div>
+          <div class="card-pack" v-if="card.pack && card.pack.length">
+            <span>卡包：</span>
+            <div class="pack-images">
+              <img v-for="pack in card.pack" :key="pack" :src="`/img/packs/${pack}.png`" :alt="pack" class="pack-image">
+            </div>
+          </div>
+        </div>
         <div class="card-footer">
           <div class="weakness" v-if="card.weakness">
             <span>弱點</span>
@@ -104,12 +116,16 @@ export default defineComponent({
       }, text);
     };
 
+    const getSeriesImage = (series: string) => {
+      return series === 'A' ? '/img/packs/GeneticApex.png' : `/img/packs/${series}.png`;
+    }
+
     onMounted(() => {
       // 在組件掛載時滾動到頁面頂部
       window.scrollTo(0, 0)
     })
 
-    return { card, totalCards, goBack, formatAbilityText }
+    return { card, totalCards, goBack, formatAbilityText, getSeriesImage }
   }
 })
 </script>
@@ -276,5 +292,46 @@ hr {
 .ability p :deep(b), .move-defect :deep(b) {
   font-weight: bold;
   color: var(--primary-color);
+}
+
+.card-series-pack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* 增加間距 */
+  margin-bottom: 1.5rem;  /* 增加底部間距 */
+}
+
+.card-series, .card-pack {
+  display: flex;
+  align-items: center;
+}
+
+.series-image, .pack-image {
+  width: 60px;  /* 原來的 30px 的三倍 */
+  height: auto;
+  margin-left: 10px;  /* 增加左邊距 */
+}
+
+.pack-images {
+  display: flex;
+  gap: 15px;  /* 增加圖片之間的間距 */
+  margin-left: 10px;
+  flex-wrap: wrap;  /* 允許圖片換行 */
+}
+
+/* 為了確保文字對齊，可以添加以下樣式 */
+.card-series span, .card-pack span {
+  min-width: 50px;  /* 確保文字有足夠的空間 */
+}
+
+/* 對於小屏幕設備，我們可能需要調整佈局 */
+@media (max-width: 768px) {
+  .card-series-pack {
+    flex-direction: column;
+  }
+
+  .series-image, .pack-image {
+    width: 60px;  /* 在小屏幕上稍微縮小一點 */
+  }
 }
 </style>
