@@ -4127,7 +4127,7 @@ export const cards: Card[] = [
     {
         id: 279,
         name: '胖可丁EX',
-        imageUrl: '/img/GeneticApex/GeneticApex_20_00195.webp',
+        imageUrl: '/img/GeneticApex/GeneticApex_30_00195.webp',
         type: '/img/type/colorless.png',
         rarity: '/img/grade/star2.png',
         packs: 'A',

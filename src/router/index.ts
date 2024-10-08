@@ -19,7 +19,7 @@ const routes = [
     component: CardDetail
   },
   {
-    path: '/deck-building',  // 確保這裡的路徑是 '/deck-building'
+    path: '/deck-building',  
     name: 'DeckBuilding',
     component: DeckBuilding
   }

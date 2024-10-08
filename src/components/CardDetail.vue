@@ -76,7 +76,6 @@
         <hr>
         <div class="card-number">
           <span>{{ card.id }} of {{ totalCards }}</span>
-          <el-button @click="goBack" type="primary" size="small">返回</el-button>
         </div>
       </div>
     </div>
@@ -84,32 +83,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { defineComponent, computed } from 'vue'
 import { cards } from '../data/cards'
 
 export default defineComponent({
   name: 'CardDetail',
+  props: {
+    card: {
+      type: Object,
+      required: true
+    }
+  },
   setup() {
-    const route = useRoute()
-    const router = useRouter()
-
-    const card = computed(() => {
-      const id = Number(route.params.id)
-      return cards.find(c => c.id === id)
-    })
-
     const totalCards = cards.length
 
-    const goBack = () => {
-      router.push('/cards')
-    }
-
     const formatAbilityText = (text: string) => {
-      // 這裡定義需要加粗的關鍵詞
       const boldWords = ['睡眠', 'HP', '中毒', '麻痺', '燒傷', '混亂'];
-      
-      // 使用正則表達式替換關鍵詞為加粗版本
       return boldWords.reduce((acc, word) => {
         const regex = new RegExp(`\\b${word}\\b`, 'g');
         return acc.replace(regex, `<b>${word}</b>`);
@@ -120,12 +109,7 @@ export default defineComponent({
       return series === 'A' ? '/img/packs/GeneticApex.png' : `/img/packs/${series}.png`;
     }
 
-    onMounted(() => {
-      // 在組件掛載時滾動到頁面頂部
-      window.scrollTo(0, 0)
-    })
-
-    return { card, totalCards, goBack, formatAbilityText, getSeriesImage }
+    return { totalCards, formatAbilityText, getSeriesImage }
   }
 })
 </script>
@@ -135,7 +119,6 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -334,4 +317,5 @@ hr {
     width: 60px;  /* 在小屏幕上稍微縮小一點 */
   }
 }
+
 </style>

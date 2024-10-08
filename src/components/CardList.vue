@@ -3,7 +3,7 @@
     <FilterComponent @filter="applyFilter" />
     <h2>卡牌列表</h2>
     <div class="card-grid">
-      <div v-for="card in filteredCards" :key="card.id" class="card" @click="goToCardDetail(card.id)">
+      <div v-for="card in filteredCards" :key="card.id" class="card" @click="openCardDetail(card)">
         <img :src="card.imageUrl" :alt="card.name" class="card-image">
         <h3>{{ card.name }}</h3>
         <div class="card-info">
@@ -11,6 +11,19 @@
         </div>
       </div>
     </div>
+
+    <!-- 修改模态框 -->
+    <el-dialog
+      v-model="isCardDetailVisible"
+      :show-close="false"
+      :close-on-click-modal="true"
+      :close-on-press-escape="true"
+      :modal="true"
+      width="80%"
+      custom-class="card-detail-dialog"
+    >
+      <CardDetail v-if="selectedCard" :card="selectedCard" />
+    </el-dialog>
   </div>
 </template>
 
@@ -18,7 +31,9 @@
 import { defineComponent, ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import FilterComponent from './FilterComponent.vue'
+import CardDetail from './CardDetail.vue'
 import { type Card, cards } from '../data/cards'
+import { ElDialog } from 'element-plus'
 
 interface Filter {
   searchTerm: string;
@@ -31,7 +46,9 @@ interface Filter {
 export default defineComponent({
   name: 'CardList',
   components: {
-    FilterComponent
+    FilterComponent,
+    CardDetail,
+    ElDialog
   },
   setup() {
     const router = useRouter()
@@ -42,6 +59,9 @@ export default defineComponent({
       series: '',
       pack: ''
     })
+
+    const isCardDetailVisible = ref(false)
+    const selectedCard = ref<Card | null>(null)
 
     const applyFilter = (newFilter: Filter) => {
       filter.value = newFilter
@@ -58,20 +78,30 @@ export default defineComponent({
       })
     })
 
-    const goToCardDetail = (id: number) => {
-      router.push(`/card/${id}`)
+    const openCardDetail = (card: Card) => {
+      selectedCard.value = card
+      isCardDetailVisible.value = true
+    }
+
+    const closeCardDetail = () => {
+      isCardDetailVisible.value = false
+      selectedCard.value = null
     }
 
     return {
       filteredCards,
       applyFilter,
-      goToCardDetail
+      openCardDetail,
+      isCardDetailVisible,
+      selectedCard,
+      closeCardDetail
     }
   }
 })
 </script>
 
 <style scoped>
+/* 保留原有的样式 */
 .card-list {
   display: flex;
   flex-direction: column;
@@ -100,7 +130,7 @@ h2 {
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  background-color: #333333; /* 深灰色背景 */
+  background-color: #333333;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -150,4 +180,26 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+/* 修改模态框样式 */
+:deep(.card-detail-dialog) {
+  background-color: var(--background-color);
+  border: 2px solid black; /* 添加黑色边框 */
+}
+
+:deep(.el-dialog) {
+  background-color: black !important; /* 设置对话框背景为黑色 */
+  border-radius: 10px; /* 圆角 */
+  overflow: hidden; /* 确保内容不会溢出圆角 */
+}
+
+:deep(.el-dialog__header) {
+  display: none; /* 隐藏标题栏 */
+}
+
+:deep(.el-dialog__body) {
+  padding: 0;
+}
+
+/* 其他样式保持不变 */
 </style>
