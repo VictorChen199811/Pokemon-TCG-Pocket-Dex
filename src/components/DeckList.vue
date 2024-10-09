@@ -5,71 +5,71 @@
       <el-button type="primary" @click="goToCreateDeck" :disabled="!canCreateDeck">創建新牌組</el-button>
     </div>
     
-    <div class="light-filter-component">
-      <div class="filter-toggle" @click="toggleFilter">
-        <img src="/img/material-symbols-light--keyboard-arrow-down-rounded.png"
-          :class="{ 'rotate': isFilterVisible }" alt="Toggle filter" class="toggle-icon">
-      </div>
-      <div v-if="isFilterVisible" class="filter-content">
-        <LightFilterComponent @filter="handleFilter" />
-      </div>
+    <DeckSearchComponent @search="handleSearch" />
+
+    <div v-if="initialLoading" class="initial-loading">
+      <el-icon class="is-loading"><Loading /></el-icon>
+      <span>加載中...</span>
     </div>
 
-    <div class="deck-grid">
-      <el-card v-for="deck in decks" :key="deck.id" class="deck-card">
-        <template #header>
-          <div class="deck-card-header">
-            <h3>{{ deck.name }}</h3>
-            <span>by {{ deck.displayholderUserName }}</span>
-          </div>
-        </template>
-        <div class="deck-preview">
-          <div class="card-grid">
-            <div v-for="cardId in sortedDeckCards(deck.cards)" :key="cardId" class="card-slot">
-              <img :src="getCardImage(cardId)" :alt="getCardName(cardId)" class="card-image" />
+    <div v-else>
+      <div class="deck-grid">
+        <el-card v-for="deck in decks" :key="deck.id" class="deck-card">
+          <template #header>
+            <div class="deck-card-header">
+              <h3>{{ deck.name }}</h3>
+              <span>by {{ deck.displayholderUserName }}</span>
+            </div>
+          </template>
+          <div class="deck-preview">
+            <div class="card-grid">
+              <div v-for="cardId in sortedDeckCards(deck.cards)" :key="cardId" class="card-slot">
+                <img :src="getCardImage(cardId)" :alt="getCardName(cardId)" class="card-image" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="deck-actions">
-          <el-button type="primary" size="small" @click="viewDeckDetails(deck)">
-            <el-icon><View /></el-icon>
-            詳情
-          </el-button>
-          <el-button type="primary" size="small" @click="shareDeck(deck)">
-            <el-icon><Share /></el-icon>
-            分享
-          </el-button>
-        </div>
-      </el-card>
-    </div>
+          <div class="deck-actions">
+            <el-button type="primary" size="small" @click="viewDeckDetails(deck)">
+              <el-icon><View /></el-icon>
+              詳情
+            </el-button>
+            <el-button type="primary" size="small" @click="shareDeck(deck)">
+              <el-icon><Share /></el-icon>
+              分享
+            </el-button>
+          </div>
+        </el-card>
+      </div>
 
-    <div v-if="loading" class="loading">Loading...</div>
-    <div ref="loadMoreTrigger" v-if="!noMoreDecks" class="load-more-trigger"></div>
-    <div v-if="noMoreDecks" class="no-more-decks">沒有更多牌組了</div>
+      <div class="load-more-section">
+        <div v-if="!noMoreDecks" class="load-more-trigger" ref="loadMoreTrigger">
+        </div>
+        <div v-else class="no-more-decks">沒有更多牌組了</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { collection, query, orderBy, limit, startAfter, getDocs, type DocumentData, QueryDocumentSnapshot } from 'firebase/firestore';
+import { collection, query, orderBy, limit, startAfter, getDocs, type DocumentData, QueryDocumentSnapshot, where } from 'firebase/firestore';
 import { db, auth } from '../firebase';
 import { cards } from '../data/cards';
-import LightFilterComponent from './LightFilterComponent.vue';
-import { View, Share } from '@element-plus/icons-vue';
-import { ElMessage } from 'element-plus';
+import DeckSearchComponent from './DeckSearchComponent.vue';
+import { View, Share, Loading } from '@element-plus/icons-vue';
+import { ElMessage, ElLoading } from 'element-plus';
 
 const router = useRouter();
 const decks = ref<DocumentData[]>([]);
-const searchQuery = ref('');
-const selectedTypes = ref<string[]>([]);
-const isFilterVisible = ref(true);
 const currentPage = ref(1);
 const pageSize = 12;
 const loading = ref(false);
 const lastVisible = ref<QueryDocumentSnapshot | null>(null);
 const noMoreDecks = ref(false);
 const loadMoreTrigger = ref<HTMLElement | null>(null);
+const initialLoading = ref(true);
+const updateDate = ref('');
 
 // 新增：檢查用戶是否可以創建牌組
 const canCreateDeck = computed(() => {
@@ -77,26 +77,9 @@ const canCreateDeck = computed(() => {
   return user && user.displayName && user.displayName.trim() !== '';
 });
 
-const filteredDecks = computed(() => {
-  return decks.value.filter(deck => {
-    const matchesSearch = deck.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-                          deck.description.toLowerCase().includes(searchQuery.value.toLowerCase());
-    const matchesType = selectedTypes.value.length === 0 || 
-                        deck.cards.some((cardId: number) => {
-                          const card = cards.find(c => c.id === cardId);
-                          return card && selectedTypes.value.includes(card.type);
-                        });
-    return matchesSearch && matchesType;
-  });
-});
-
-const handleFilter = (filterData: { searchTerm: string; types: string[] }) => {
-  searchQuery.value = filterData.searchTerm;
-  selectedTypes.value = filterData.types;
-};
-
-const toggleFilter = () => {
-  isFilterVisible.value = !isFilterVisible.value;
+const handleSearch = (searchData: { updateDate: string }) => {
+  updateDate.value = searchData.updateDate; // 新增
+  loadDecks();
 };
 
 const sortedDeckCards = (deckCards: number[]) => {
@@ -117,8 +100,41 @@ const loadDecks = async (loadMore = false) => {
   if (loading.value || (loadMore && noMoreDecks.value)) return;
 
   loading.value = true;
+  if (loadMore) {
+    ElLoading.service({
+      lock: true,
+      text: '加載更多...',
+      background: 'rgba(0, 0, 0, 0.7)',
+      target: '.load-more-section'
+    });
+  }
+
   try {
-    let q = query(collection(db, "decks"), orderBy("createDateAt", "desc"), limit(pageSize));
+    let q = query(collection(db, "decks"));
+
+    // 根據選擇的更新日期進行過濾
+    if (updateDate.value) {
+      const now = new Date();
+      let dateLimit;
+      switch (updateDate.value) {
+        case 'lastWeek':
+          dateLimit = new Date(now.setDate(now.getDate() - 7));
+          break;
+        case 'lastMonth':
+          dateLimit = new Date(now.setMonth(now.getMonth() - 1));
+          break;
+        case 'lastYear':
+          dateLimit = new Date(now.setFullYear(now.getFullYear() - 1));
+          break;
+        default:
+          dateLimit = null;
+      }
+      if (dateLimit) {
+        q = query(q, where("updateDateAt", ">=", dateLimit));
+      }
+    }
+
+    q = query(q, orderBy("createDateAt", "desc"), limit(pageSize));
     
     if (loadMore && lastVisible.value) {
       q = query(q, startAfter(lastVisible.value));
@@ -133,7 +149,8 @@ const loadDecks = async (loadMore = false) => {
       noMoreDecks.value = true;
     } else {
       querySnapshot.forEach((doc) => {
-        decks.value.push({ id: doc.id, ...doc.data() });
+        const deckData = doc.data();
+        decks.value.push({ id: doc.id, ...deckData });
       });
       lastVisible.value = querySnapshot.docs[querySnapshot.docs.length - 1];
     }
@@ -146,6 +163,7 @@ const loadDecks = async (loadMore = false) => {
     ElMessage.error('加載牌組失敗，請稍後再試');
   } finally {
     loading.value = false;
+    initialLoading.value = false;
   }
 };
 
@@ -156,14 +174,14 @@ onMounted(() => {
     if (entries[0].isIntersecting && !loading.value && !noMoreDecks.value) {
       loadDecks(true);
     }
-  }, { threshold: 1.0 });
+  }, { threshold: 0.5 });
 
   if (loadMoreTrigger.value) {
     observer.observe(loadMoreTrigger.value);
   }
 });
 
-watch([searchQuery, selectedTypes], () => {
+watch([updateDate], () => {
   loadDecks();
 });
 
@@ -266,7 +284,7 @@ const shareDeck = async (deck: any) => {
 .deck-actions .el-button {
   width: 40%; /* 設置按鈕寬度為 40% */
   padding: 10px 0; /* 增加按鈕的上下內邊距 */
-  font-size: 16px; /* 增加字體大小 */
+  font-size: 16px; /* 增���字體大小 */
 }
 
 .el-button {
@@ -390,14 +408,37 @@ const shareDeck = async (deck: any) => {
   color: var(--background-color);
 }
 
-.load-more-trigger {
-  height: 20px;
+.load-more-section {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
+  height: 50px;
+  position: relative;
 }
 
-.loading, .no-more-decks {
+.load-more-trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.no-more-decks {
   text-align: center;
-  margin-top: 20px;
   color: var(--text-color);
+}
+
+.initial-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--primary-color);
+}
+
+.initial-loading .el-icon {
+  font-size: 24px;
+  margin-right: 10px;
 }
 </style>
